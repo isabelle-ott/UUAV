@@ -1,5 +1,1 @@
-# README
-
-Use to manage ros
-
-test
+package about ros
