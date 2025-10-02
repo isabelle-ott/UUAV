@@ -1,0 +1,10 @@
+<launch>
+
+    <node name="qrcode_detect_node" pkg="ros_opencv" type="qrcode_detect" output="screen" respawn="false"/>            
+
+    <node name="color_erea_detect_node" pkg="ros_opencv" type="color_erea_detect" output="screen" respawn="false"/>
+
+    <node name="state_machine_node" pkg="ros_opencv" type="state" output="screen" respawn="false"  required="true"/> 
+
+
+</launch>

@@ -137,6 +137,9 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
  add_executable(qrcode_detect src/qrcode_detect.cpp)
+ add_executable(color_erea_detect src/color_erea_detect.cpp)
+ add_executable(find_hsv src/find_hsv.cpp)
+ add_executable(state src/state.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -154,7 +157,21 @@ include_directories(
    ${catkin_LIBRARIES}
    ${OpenCV_LIBRARIES}
  )
-
+ target_link_libraries(color_erea_detect
+  #  ros_opencv
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBRARIES}
+ )
+  target_link_libraries(find_hsv
+  #  ros_opencv
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBRARIES}
+ )
+   target_link_libraries(state
+  #  ros_opencv
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBRARIES}
+ )
 #############
 ## Install ##
 #############
