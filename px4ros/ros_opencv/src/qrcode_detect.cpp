@@ -53,12 +53,15 @@ void qrcode_identify(Mat &img)
 {
     Mat gray_img;
     cvtColor(img, gray_img, COLOR_BGR2GRAY);
+    imshow("gray_img", gray_img);
 
-    Mat blur_img;
-    GaussianBlur(gray_img, blur_img, Size(5, 5), 0);
+    // Mat blur_img;
+    // GaussianBlur(gray_img, blur_img, Size(5, 5), 0);
+    // imshow("blur_img", blur_img);
 
     Mat binary_img;
-    threshold(blur_img, binary_img, 0, 255, THRESH_BINARY | THRESH_OTSU);
+    threshold(gray_img, binary_img, 0, 255, THRESH_BINARY | THRESH_OTSU);
+    imshow("binary_img", binary_img);
 
     QRCodeDetector qrcode_detector;
     vector<Point> points;
