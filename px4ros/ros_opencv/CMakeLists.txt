@@ -13,6 +13,7 @@ set(OpenCV_DIR "/usr/local/lib/cmake/opencv4")
 find_package(catkin REQUIRED COMPONENTS
   OpenCV
   roscpp
+  serial
 )
 
 ## System dependencies are found with CMake's conventions
@@ -124,9 +125,9 @@ include_directories(
 )
 
 ## Declare a C++ library
-#  add_library(${PROJECT_NAME}
-#    src/qrcode_detect.cpp
-#  )
+ add_library(${PROJECT_NAME}
+   src/uart.cpp
+ )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -139,7 +140,13 @@ include_directories(
  add_executable(qrcode_detect src/qrcode_detect.cpp)
  add_executable(color_erea_detect src/color_erea_detect.cpp)
  add_executable(find_hsv src/find_hsv.cpp)
- add_executable(state src/state.cpp)
+ add_executable(state
+   src/uart.cpp
+  src/state.cpp)
+ add_executable(uart_test
+  src/uart.cpp
+  src/uart_test.cpp
+)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -168,6 +175,11 @@ include_directories(
    ${OpenCV_LIBRARIES}
  )
    target_link_libraries(state
+  #  ros_opencv
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBRARIES}
+ )
+    target_link_libraries(uart_test
   #  ros_opencv
    ${catkin_LIBRARIES}
    ${OpenCV_LIBRARIES}
