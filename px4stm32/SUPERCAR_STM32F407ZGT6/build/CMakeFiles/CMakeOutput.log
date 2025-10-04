@@ -1,0 +1,284 @@
+The target system is: Generic -  - arm
+The host system is: Linux - 5.15.0-139-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc 
+Build flags: ;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;;-Wall;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;;-Wall;-fdata-sections;-ffunction-sections
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ 
+Build flags: ;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;;-Wall;-fdata-sections;-ffunction-sections;-mcpu=cortex-m4;-mfpu=fpv4-sp-d16;-mfloat-abi=hard;;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1c167/fast && /usr/bin/make -f CMakeFiles/cmTC_1c167.dir/build.make CMakeFiles/cmTC_1c167.dir/build
+make[1]: 进入目录“/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_1c167.dir/testCCompiler.c.obj
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections    -std=gnu11 -o CMakeFiles/cmTC_1c167.dir/testCCompiler.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C static library libcmTC_1c167.a
+/usr/bin/cmake -P CMakeFiles/cmTC_1c167.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c167.dir/link.txt --verbose=1
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ar qc libcmTC_1c167.a  CMakeFiles/cmTC_1c167.dir/testCCompiler.c.obj
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib libcmTC_1c167.a
+make[1]: 离开目录“/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp”
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_16886/fast && /usr/bin/make -f CMakeFiles/cmTC_16886.dir/build.make CMakeFiles/cmTC_16886.dir/build
+make[1]: Entering directory '/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections    -v -std=gnu11 -o CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+Thread model: single
+Supported LTO compression algorithms: zlib zstd
+gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-std=gnu11' '-o' 'CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_16886.dir/'
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_16886.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -std=gnu11 -version -fdata-sections -ffunction-sections -o /tmp/ccSlIWhA.s
+GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
+	compiled by GNU C version 9.2.1 20191120 (Red Hat 9.2.1-2), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+ignoring nonexistent directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/local/include"
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+End of search list.
+Compiler executable checksum: f1c6d1095e4a9f51a2e062da29cb95b2
+COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-std=gnu11' '-o' 'CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_16886.dir/'
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj /tmp/ccSlIWhA.s
+GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
+COMPILER_PATH=/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-std=gnu11' '-o' 'CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.'
+Linking C static library libcmTC_16886.a
+/usr/bin/cmake -P CMakeFiles/cmTC_16886.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16886.dir/link.txt --verbose=1
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ar qc libcmTC_16886.a  CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib libcmTC_16886.a
+make[1]: Leaving directory '/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+    add: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+    add: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+  end of search list found
+  collapse include dir [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include]
+  collapse include dir [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+  collapse include dir [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+  implicit include dirs: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include;/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed;/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-none-eabi-g\+\+|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_16886/fast && /usr/bin/make -f CMakeFiles/cmTC_16886.dir/build.make CMakeFiles/cmTC_16886.dir/build]
+  ignore line: [make[1]: Entering directory '/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections    -v -std=gnu11 -o CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc]
+  ignore line: [Target: arm-none-eabi]
+  ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)']
+  ignore line: [Thread model: single]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-std=gnu11' '-o' 'CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_16886.dir/']
+  ignore line: [ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_16886.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -std=gnu11 -version -fdata-sections -ffunction-sections -o /tmp/ccSlIWhA.s]
+  ignore line: [GNU C11 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)]
+  ignore line: [	compiled by GNU C version 9.2.1 20191120 (Red Hat 9.2.1-2)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"]
+  ignore line: [ignoring nonexistent directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"]
+  ignore line: [ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"]
+  ignore line: [ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+  ignore line: [ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+  ignore line: [ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+  ignore line: [End of search list.]
+  ignore line: [Compiler executable checksum: f1c6d1095e4a9f51a2e062da29cb95b2]
+  ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-std=gnu11' '-o' 'CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_16886.dir/']
+  ignore line: [ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj /tmp/ccSlIWhA.s]
+  ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616]
+  ignore line: [COMPILER_PATH=/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+  ignore line: [LIBRARY_PATH=/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-std=gnu11' '-o' 'CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C static library libcmTC_16886.a]
+  ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_16886.dir/cmake_clean_target.cmake]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16886.dir/link.txt --verbose=1]
+  ignore line: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ar qc libcmTC_16886.a  CMakeFiles/cmTC_16886.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib libcmTC_16886.a]
+  ignore line: [make[1]: Leaving directory '/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp']
+  ignore line: []
+  ignore line: []
+  implicit libs: []
+  implicit dirs: []
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_60fcb/fast && /usr/bin/make -f CMakeFiles/cmTC_60fcb.dir/build.make CMakeFiles/cmTC_60fcb.dir/build
+make[1]: 进入目录“/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_60fcb.dir/testCXXCompiler.cxx.obj
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++    -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -o CMakeFiles/cmTC_60fcb.dir/testCXXCompiler.cxx.obj -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX static library libcmTC_60fcb.a
+/usr/bin/cmake -P CMakeFiles/cmTC_60fcb.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60fcb.dir/link.txt --verbose=1
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ar qc libcmTC_60fcb.a  CMakeFiles/cmTC_60fcb.dir/testCXXCompiler.cxx.obj
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib libcmTC_60fcb.a
+make[1]: 离开目录“/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp”
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8150b/fast && /usr/bin/make -f CMakeFiles/cmTC_8150b.dir/build.make CMakeFiles/cmTC_8150b.dir/build
+make[1]: Entering directory '/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++    -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++
+Target: arm-none-eabi
+Configured with: /data/jenkins/workspace/GNU-toolchain/arm-14/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --disable-tls --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-14/build-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://bugs.linaro.org/ --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)'
+Thread model: single
+Supported LTO compression algorithms: zlib zstd
+gcc version 14.3.1 20250623 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 
+COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_8150b.dir/'
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/ -isysroot /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8150b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccej63iB.s
+GNU C++17 (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) version 14.3.1 20250623 (arm-none-eabi)
+	compiled by GNU C version 9.2.1 20191120 (Red Hat 9.2.1-2), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1"
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard"
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward"
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include"
+ignoring nonexistent directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/local/include"
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed"
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include"
+ignoring duplicate directory "/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+End of search list.
+Compiler executable checksum: 533e33c5ce831fccacfca7f53cae5699
+COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_8150b.dir/'
+ /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccej63iB.s
+GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 2.44.0.20250616
+COMPILER_PATH=/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/14.3.1/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+LIBRARY_PATH=/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/:/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
+COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX static library libcmTC_8150b.a
+/usr/bin/cmake -P CMakeFiles/cmTC_8150b.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8150b.dir/link.txt --verbose=1
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ar qc libcmTC_8150b.a  CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj
+/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-ranlib libcmTC_8150b.a
+make[1]: Leaving directory '/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+    add: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard]
+    add: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+    add: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+    add: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+    add: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+  end of search list found
+  collapse include dir [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1] ==> [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1]
+  collapse include dir [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard] ==> [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard]
+  collapse include dir [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward] ==> [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/backward]
+  collapse include dir [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include]
+  collapse include dir [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+  collapse include dir [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+  implicit include dirs: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1;/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/arm-none-eabi/thumb/v7e-m+fp/hard;/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.3.1/backward;/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include;/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include-fixed;/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-none-eabi-g\+\+|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_8150b/fast && /usr/bin/make -f CMakeFiles/cmTC_8150b.dir/build.make CMakeFiles/cmTC_8150b.dir/build]
+  ignore line: [make[1]: Entering directory '/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj]
+  link line: [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++    -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+    arg [/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++] ==> ignore
+    arg [-mcpu=cortex-m4] ==> ignore
+    arg [-mfpu=fpv4-sp-d16] ==> ignore
+    arg [-mfloat-abi=hard] ==> ignore
+    arg [-Wall] ==> ignore
+    arg [-fdata-sections] ==> ignore
+    arg [-ffunction-sections] ==> ignore
+    arg [-mcpu=cortex-m4] ==> ignore
+    arg [-mfpu=fpv4-sp-d16] ==> ignore
+    arg [-mfloat-abi=hard] ==> ignore
+    arg [-Wall] ==> ignore
+    arg [-fdata-sections] ==> ignore
+    arg [-ffunction-sections] ==> ignore
+    arg [-fno-rtti] ==> ignore
+    arg [-fno-exceptions] ==> ignore
+    arg [-fno-threadsafe-statics] ==> ignore
+    arg [-v] ==> ignore
+    arg [-o] ==> ignore
+    arg [CMakeFiles/cmTC_8150b.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+    arg [-c] ==> ignore
+    arg [/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp] ==> ignore
+  implicit libs: []
+  implicit dirs: []
+  implicit fwks: []
+
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-none-eabi-gcc (Arm GNU Toolchain 14.3.Rel1 (Build arm-14.174)) 14.3.1 20250623
+Copyright (C) 2024 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+

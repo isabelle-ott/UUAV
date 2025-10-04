@@ -1,0 +1,76 @@
+px4# 通用忽略规则
+# 操作系统相关文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# 编译产物（Keil 和 CMake 通用）
+*.o
+*.obj
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.sym
+*.d
+*.axf
+*.crf
+*.lnp
+*.out
+*.build-log
+*.bak
+
+# CMake 相关忽略
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+*.cmake
+!CMakeLists.txt  # 保留 CMakeLists.txt
+!CMakePresets.json  # 保留 CMake 预设文件
+
+# Keil (MDK-ARM) 相关忽略
+MDK-ARM/
+*.uvopt
+*.uvoptx
+*.uvproj
+*.uvprojx
+*.uvgui
+*.uvguix
+*.dep
+*.bak
+*.sct
+*.tra
+*.htm
+*.lnp
+*.iex
+*.plg
+*.crf
+*.lst
+*.map
+*.axf
+*.hex
+*.bin
+*.uvmpw
+*.uvmpwx
+
+# STM32CubeMX 相关临时文件
+.mxproject
+*.ioc.bak 
+
+
+# 其他临时文件
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+    
