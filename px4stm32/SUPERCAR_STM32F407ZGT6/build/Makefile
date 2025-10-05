@@ -379,6 +379,33 @@ Core/Src/usart.c.s:
 	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.s
 .PHONY : Core/Src/usart.c.s
 
+User/Src/encoder.obj: User/Src/encoder.cpp.obj
+
+.PHONY : User/Src/encoder.obj
+
+# target to build an object file
+User/Src/encoder.cpp.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj
+.PHONY : User/Src/encoder.cpp.obj
+
+User/Src/encoder.i: User/Src/encoder.cpp.i
+
+.PHONY : User/Src/encoder.i
+
+# target to preprocess a source file
+User/Src/encoder.cpp.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.i
+.PHONY : User/Src/encoder.cpp.i
+
+User/Src/encoder.s: User/Src/encoder.cpp.s
+
+.PHONY : User/Src/encoder.s
+
+# target to generate assembly for a file
+User/Src/encoder.cpp.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.s
+.PHONY : User/Src/encoder.cpp.s
+
 startup_stm32f407xx.obj: startup_stm32f407xx.s.obj
 
 .PHONY : startup_stm32f407xx.obj
@@ -425,6 +452,9 @@ help:
 	@echo "... Core/Src/usart.obj"
 	@echo "... Core/Src/usart.i"
 	@echo "... Core/Src/usart.s"
+	@echo "... User/Src/encoder.obj"
+	@echo "... User/Src/encoder.i"
+	@echo "... User/Src/encoder.s"
 	@echo "... startup_stm32f407xx.obj"
 .PHONY : help
 

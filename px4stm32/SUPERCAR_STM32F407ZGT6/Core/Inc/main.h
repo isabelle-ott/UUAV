@@ -69,10 +69,14 @@ void Error_Handler(void);
 #define driver_eder_2_A_GPIO_Port GPIOA
 #define driver_eder_2_B_Pin GPIO_PIN_7
 #define driver_eder_2_B_GPIO_Port GPIOA
+#define driver_GPIO_1_Pin GPIO_PIN_0
+#define driver_GPIO_1_GPIO_Port GPIOB
 #define driver_eder_1_A_Pin GPIO_PIN_9
 #define driver_eder_1_A_GPIO_Port GPIOE
 #define driver__eder_1_B_Pin GPIO_PIN_11
 #define driver__eder_1_B_GPIO_Port GPIOE
+#define driver_GPIO_4_Pin GPIO_PIN_10
+#define driver_GPIO_4_GPIO_Port GPIOB
 #define Light_Pin GPIO_PIN_9
 #define Light_GPIO_Port GPIOD
 #define ARM1_Pin GPIO_PIN_6
@@ -83,6 +87,8 @@ void Error_Handler(void);
 #define ARM3_GPIO_Port GPIOC
 #define driver_eder_3_A_Pin GPIO_PIN_15
 #define driver_eder_3_A_GPIO_Port GPIOA
+#define driver__GPIO_3_Pin GPIO_PIN_0
+#define driver__GPIO_3_GPIO_Port GPIOD
 #define driver_eder_3_B_Pin GPIO_PIN_3
 #define driver_eder_3_B_GPIO_Port GPIOB
 #define driver_eder_4_A_Pin GPIO_PIN_6
@@ -91,6 +97,8 @@ void Error_Handler(void);
 #define driver_eder_4_B_GPIO_Port GPIOB
 #define CAMERA_pwm_Pin GPIO_PIN_8
 #define CAMERA_pwm_GPIO_Port GPIOB
+#define driver__GPIO_2_Pin GPIO_PIN_0
+#define driver__GPIO_2_GPIO_Port GPIOE
 
 /* USER CODE BEGIN Private defines */
 

@@ -1,3 +1,51 @@
 {
+    "files.associations": {
+        "*.cpp": "cpp",
+        "*.hpp": "cpp",
+        "*.cc": "cpp",
+        "*.cxx": "cpp",
+        "*.c": "c",
+        "*.h": "c",
+        "*.s": "asm",
+        "stm32h7xx_hal.h": "c",
+        "core_cm7.h": "c",
+        "system_stm32h7xx.h": "c"
+    },
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/Core/Inc",
+        "${workspaceFolder}/User/Inc",
+        "${workspaceFolder}/Drivers/STM32H7xx_HAL_Driver/Inc",
+        "${workspaceFolder}/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy",
+        "${workspaceFolder}/Drivers/CMSIS/Include",
+        "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
+    ],
+    "C_Cpp.default.compilerPath": "/opt/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-g++",
+    "C_Cpp.default.intelliSenseMode": "gcc-arm",
+    "C_Cpp.default.cStandard": "c99",
+    "C_Cpp.default.cppStandard": "c++11",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "[cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "[c]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "files.exclude": {
+        "**/build/**": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+    "C_Cpp.default.autocomplete": "default",
+    "C_Cpp.default.suggestSnippets": true,
+    "C_Cpp.default.enableConfigurationSquiggles": true,
     "C_Cpp.errorSquiggles": "disabled"
 }

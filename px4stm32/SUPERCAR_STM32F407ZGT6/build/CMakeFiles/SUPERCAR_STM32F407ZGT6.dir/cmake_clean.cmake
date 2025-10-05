@@ -9,12 +9,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj"
   "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.obj"
   "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj"
   "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj"
   "SUPERCAR_STM32F407ZGT6.elf"
   "SUPERCAR_STM32F407ZGT6.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang ASM C)
+foreach(lang ASM C CXX)
   include(CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

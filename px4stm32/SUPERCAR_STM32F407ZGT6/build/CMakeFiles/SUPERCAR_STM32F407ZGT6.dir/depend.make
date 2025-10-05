@@ -115,6 +115,7 @@ CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj: ../Drivers/STM32F4xx_
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj: ../User/Inc/encoder.h
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj: ../Core/Src/main.c
 
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Inc/main.h
@@ -267,4 +268,42 @@ CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj: ../Drivers/STM32F4xx
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj: ../Core/Src/usart.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Core/Inc/main.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Core/Inc/stm32f4xx_hal_conf.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Core/Inc/tim.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Include/cmsis_armcc.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Include/cmsis_armclang.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Include/cmsis_armclang_ltm.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Include/cmsis_compiler.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Include/cmsis_gcc.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Include/cmsis_iccarm.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Include/cmsis_version.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Include/core_cm4.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/CMSIS/Include/mpu_armv7.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../User/Inc/encoder.h
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../User/Src/encoder.cpp
 

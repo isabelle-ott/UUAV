@@ -2,6 +2,7 @@
 set(CMAKE_DEPENDS_LANGUAGES
   "ASM"
   "C"
+  "CXX"
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
@@ -23,6 +24,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+  "../cmake/stm32cubemx/../../User/Inc"
   )
 set(CMAKE_DEPENDS_CHECK_C
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/can.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj"
@@ -51,6 +53,28 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+  "../cmake/stm32cubemx/../../User/Inc"
+  )
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.cpp" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "DEBUG"
+  "STM32F407xx"
+  "USE_HAL_DRIVER"
+  )
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../cmake/stm32cubemx/../../Core/Inc"
+  "../cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc"
+  "../cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+  "../cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+  "../cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+  "../cmake/stm32cubemx/../../User/Inc"
   )
 
 # Targets to which this target links.

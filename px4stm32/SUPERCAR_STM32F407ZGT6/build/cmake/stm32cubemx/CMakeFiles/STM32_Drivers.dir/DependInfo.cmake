@@ -39,6 +39,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+  "../cmake/stm32cubemx/../../User/Inc"
   )
 
 # Targets to which this target links.

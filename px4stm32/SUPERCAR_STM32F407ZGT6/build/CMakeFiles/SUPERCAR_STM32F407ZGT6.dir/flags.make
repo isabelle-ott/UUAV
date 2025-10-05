@@ -3,15 +3,22 @@
 
 # compile ASM with /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc
 # compile C with /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc
+# compile CXX with /opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++
 ASM_FLAGS =  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g  
 
 ASM_DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
 
-ASM_INCLUDES = -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Core/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Include 
+ASM_INCLUDES = -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Core/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Include -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../User/Inc 
 
 C_FLAGS =  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3   -std=gnu11
 
 C_DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
 
-C_INCLUDES = -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Core/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Include 
+C_INCLUDES = -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Core/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Include -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../User/Inc 
+
+CXX_FLAGS =  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -O0 -g3  
+
+CXX_DEFINES = -DDEBUG -DSTM32F407xx -DUSE_HAL_DRIVER
+
+CXX_INCLUDES = -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Core/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../Drivers/CMSIS/Include -I/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/cmake/stm32cubemx/../../User/Inc 
 

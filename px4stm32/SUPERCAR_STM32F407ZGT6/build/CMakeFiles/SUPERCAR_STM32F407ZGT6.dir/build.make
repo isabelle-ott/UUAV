@@ -179,6 +179,19 @@ CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj: ../startup_stm3
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building ASM object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj"
 	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/startup_stm32f407xx.s
 
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj: ../User/Src/encoder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.cpp
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.cpp > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.cpp -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.s
+
 # Object files for target SUPERCAR_STM32F407ZGT6
 SUPERCAR_STM32F407ZGT6_OBJECTS = \
 "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj" \
@@ -190,7 +203,8 @@ SUPERCAR_STM32F407ZGT6_OBJECTS = \
 "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj" \
 "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj" \
 "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj" \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj"
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj"
 
 # External object files for target SUPERCAR_STM32F407ZGT6
 SUPERCAR_STM32F407ZGT6_EXTERNAL_OBJECTS = \
@@ -223,6 +237,7 @@ SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -243,7 +258,7 @@ SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable SUPERCAR_STM32F407ZGT6.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable SUPERCAR_STM32F407ZGT6.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
