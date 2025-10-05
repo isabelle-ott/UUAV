@@ -53,10 +53,10 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     User/Src/encoder.cpp
     User/Src/imu.cpp
     User/Src/light.cpp
-    User/Src/motor_control.cpp
-    User/Src/motor_drive.cpp
     User/Src/pid.cpp
     User/Src/position_control.cpp
+    User/Src/init.cpp
+    User/Src/motor.cpp
     
     # 核心源文件
     Core/Src/main.c

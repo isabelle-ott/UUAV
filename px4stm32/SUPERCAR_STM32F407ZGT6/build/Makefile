@@ -487,6 +487,33 @@ User/Src/imu.cpp.s:
 	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.cpp.s
 .PHONY : User/Src/imu.cpp.s
 
+User/Src/init.obj: User/Src/init.cpp.obj
+
+.PHONY : User/Src/init.obj
+
+# target to build an object file
+User/Src/init.cpp.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.cpp.obj
+.PHONY : User/Src/init.cpp.obj
+
+User/Src/init.i: User/Src/init.cpp.i
+
+.PHONY : User/Src/init.i
+
+# target to preprocess a source file
+User/Src/init.cpp.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.cpp.i
+.PHONY : User/Src/init.cpp.i
+
+User/Src/init.s: User/Src/init.cpp.s
+
+.PHONY : User/Src/init.s
+
+# target to generate assembly for a file
+User/Src/init.cpp.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.cpp.s
+.PHONY : User/Src/init.cpp.s
+
 User/Src/light.obj: User/Src/light.cpp.obj
 
 .PHONY : User/Src/light.obj
@@ -514,59 +541,32 @@ User/Src/light.cpp.s:
 	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.cpp.s
 .PHONY : User/Src/light.cpp.s
 
-User/Src/motor_control.obj: User/Src/motor_control.cpp.obj
+User/Src/motor.obj: User/Src/motor.cpp.obj
 
-.PHONY : User/Src/motor_control.obj
-
-# target to build an object file
-User/Src/motor_control.cpp.obj:
-	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.cpp.obj
-.PHONY : User/Src/motor_control.cpp.obj
-
-User/Src/motor_control.i: User/Src/motor_control.cpp.i
-
-.PHONY : User/Src/motor_control.i
-
-# target to preprocess a source file
-User/Src/motor_control.cpp.i:
-	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.cpp.i
-.PHONY : User/Src/motor_control.cpp.i
-
-User/Src/motor_control.s: User/Src/motor_control.cpp.s
-
-.PHONY : User/Src/motor_control.s
-
-# target to generate assembly for a file
-User/Src/motor_control.cpp.s:
-	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.cpp.s
-.PHONY : User/Src/motor_control.cpp.s
-
-User/Src/motor_drive.obj: User/Src/motor_drive.cpp.obj
-
-.PHONY : User/Src/motor_drive.obj
+.PHONY : User/Src/motor.obj
 
 # target to build an object file
-User/Src/motor_drive.cpp.obj:
-	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_drive.cpp.obj
-.PHONY : User/Src/motor_drive.cpp.obj
+User/Src/motor.cpp.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.cpp.obj
+.PHONY : User/Src/motor.cpp.obj
 
-User/Src/motor_drive.i: User/Src/motor_drive.cpp.i
+User/Src/motor.i: User/Src/motor.cpp.i
 
-.PHONY : User/Src/motor_drive.i
+.PHONY : User/Src/motor.i
 
 # target to preprocess a source file
-User/Src/motor_drive.cpp.i:
-	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_drive.cpp.i
-.PHONY : User/Src/motor_drive.cpp.i
+User/Src/motor.cpp.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.cpp.i
+.PHONY : User/Src/motor.cpp.i
 
-User/Src/motor_drive.s: User/Src/motor_drive.cpp.s
+User/Src/motor.s: User/Src/motor.cpp.s
 
-.PHONY : User/Src/motor_drive.s
+.PHONY : User/Src/motor.s
 
 # target to generate assembly for a file
-User/Src/motor_drive.cpp.s:
-	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_drive.cpp.s
-.PHONY : User/Src/motor_drive.cpp.s
+User/Src/motor.cpp.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.cpp.s
+.PHONY : User/Src/motor.cpp.s
 
 User/Src/pid.obj: User/Src/pid.cpp.obj
 
@@ -680,15 +680,15 @@ help:
 	@echo "... User/Src/imu.obj"
 	@echo "... User/Src/imu.i"
 	@echo "... User/Src/imu.s"
+	@echo "... User/Src/init.obj"
+	@echo "... User/Src/init.i"
+	@echo "... User/Src/init.s"
 	@echo "... User/Src/light.obj"
 	@echo "... User/Src/light.i"
 	@echo "... User/Src/light.s"
-	@echo "... User/Src/motor_control.obj"
-	@echo "... User/Src/motor_control.i"
-	@echo "... User/Src/motor_control.s"
-	@echo "... User/Src/motor_drive.obj"
-	@echo "... User/Src/motor_drive.i"
-	@echo "... User/Src/motor_drive.s"
+	@echo "... User/Src/motor.obj"
+	@echo "... User/Src/motor.i"
+	@echo "... User/Src/motor.s"
 	@echo "... User/Src/pid.obj"
 	@echo "... User/Src/pid.i"
 	@echo "... User/Src/pid.s"

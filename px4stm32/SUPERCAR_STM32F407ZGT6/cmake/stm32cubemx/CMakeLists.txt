@@ -38,10 +38,12 @@ set(MX_Application_Src
     ${CMAKE_CURRENT_SOURCE_DIR}/../../User/Src/encoder.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../../User/Src/imu.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../../User/Src/light.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../User/Src/motor_control.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../User/Src/motor_drive.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../../User/Src/pid.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../../User/Src/position_control.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../User/Src/init.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../User/Src/motor.cpp
+
+
 )
 
 # 3.2 STM32 HAL驱动源文件（按需添加，避免冗余）
