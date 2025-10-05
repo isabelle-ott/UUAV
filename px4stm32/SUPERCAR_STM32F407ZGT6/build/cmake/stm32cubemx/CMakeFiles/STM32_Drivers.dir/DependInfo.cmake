@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/system_stm32f4xx.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
@@ -37,8 +36,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../cmake/stm32cubemx/../../Core/Inc"
   "../cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc"
   "../cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
-  "../cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+  "../cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
   "../cmake/stm32cubemx/../../User/Inc"
   )
 

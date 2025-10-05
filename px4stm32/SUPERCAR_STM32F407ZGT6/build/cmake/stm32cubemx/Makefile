@@ -125,33 +125,6 @@ STM32_Drivers/fast:
 	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build
 .PHONY : STM32_Drivers/fast
 
-__/__/Core/Src/system_stm32f4xx.obj: __/__/Core/Src/system_stm32f4xx.c.obj
-
-.PHONY : __/__/Core/Src/system_stm32f4xx.obj
-
-# target to build an object file
-__/__/Core/Src/system_stm32f4xx.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
-.PHONY : __/__/Core/Src/system_stm32f4xx.c.obj
-
-__/__/Core/Src/system_stm32f4xx.i: __/__/Core/Src/system_stm32f4xx.c.i
-
-.PHONY : __/__/Core/Src/system_stm32f4xx.i
-
-# target to preprocess a source file
-__/__/Core/Src/system_stm32f4xx.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.i
-.PHONY : __/__/Core/Src/system_stm32f4xx.c.i
-
-__/__/Core/Src/system_stm32f4xx.s: __/__/Core/Src/system_stm32f4xx.c.s
-
-.PHONY : __/__/Core/Src/system_stm32f4xx.s
-
-# target to generate assembly for a file
-__/__/Core/Src/system_stm32f4xx.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.s
-.PHONY : __/__/Core/Src/system_stm32f4xx.c.s
-
 __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj: __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 
 .PHONY : __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj
@@ -620,9 +593,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... STM32_Drivers"
-	@echo "... __/__/Core/Src/system_stm32f4xx.obj"
-	@echo "... __/__/Core/Src/system_stm32f4xx.i"
-	@echo "... __/__/Core/Src/system_stm32f4xx.s"
 	@echo "... __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj"
 	@echo "... __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.i"
 	@echo "... __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.s"
