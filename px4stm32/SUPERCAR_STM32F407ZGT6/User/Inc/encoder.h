@@ -1,107 +1,172 @@
-#ifndef ENCODER_H
-#define ENCODER_H
+#pragma once
 
 #include "main.h"
 #include "tim.h"
 #include <stdint.h>
-#include <math.h>
+#include "stm32f4xx_hal.h"
 
-// 修复1：补充M_PI定义（math.h可能未默认定义，避免编译报错）
-#ifndef M_PI
-#define M_PI 3.14159265358979323846f
-#endif
+// -------------------------- 硬件参数宏定义 --------------------------
+#define XIANSHU 500            // 编码器线数（可根据实际硬件修改）
+#define JIANSUBI 34            // 电机减速比（可根据实际硬件修改）
+#define ENCODER_INIT_VAL 32767 // 16位计数器初始值（中间值，避免溢出）
+#define ENCODER_MAX_VAL 65535  // 16位计数器最大值（固定）
 
-// 修复2：全局里程计数据和C接口声明（C/C++环境均可见）
-#ifdef __cplusplus
-extern "C"
-{ // 让C编译器能识别这些声明
-#endif
-
-// 麦轮硬件参数配置（C/C++共用，故放在extern "C"外但在头文件顶部）
-#define ENCODER_PPR 1000                                                  // 编码器分辨率（每圈脉冲数）
-#define MECANUM_WHEEL_R 50.0f                                             // 麦轮有效半径（mm，实测）
-#define CHASSIS_WHEELBASE 200.0f                                          // 底盘轴距（前后轮中心距，mm）
-#define CHASSIS_TRACK 150.0f                                              // 底盘轮距（左右轮中心距，mm）
-#define HALF_WHEELBASE_TRACK ((CHASSIS_WHEELBASE + CHASSIS_TRACK) / 2.0f) // 辅助参数
-
-    // 全局里程计数据（单位：mm、rad、ms）——C/C++均可直接访问
-    extern float encoder_total_x;      // X轴总位移（右为正）
-    extern float encoder_total_y;      // Y轴总位移（前为正）
-    extern float encoder_total_theta;  // 总旋转角度（逆时针为正，rad）
-    extern uint32_t last_encoder_time; // 上次里程更新时间戳（ms）
-
-    // 供C/C++调用的里程计重置接口（C风格接口）
-    void Encoder_ResetOdometry(void);
-
-#ifdef __cplusplus
-} // 结束extern "C"块
-#endif
-
-// -------------------------- C++编码器类（仅C++环境可见） --------------------------
-#ifdef __cplusplus
-namespace encoder
+// -------------------------- 编码器结构体定义 --------------------------
+// 注：结构体成员改为private语义（外部通过接口访问，不直接操作）
+typedef struct
 {
-    class Encoder
-    {
-    public:
-        Encoder(bool reset_on_init = false);
-        ~Encoder() = default; // 简化析构函数（无动态内存，默认即可）
+    // 1. 硬件绑定：定时器句柄（与STM32定时器对应）
+    TIM_HandleTypeDef *htim_left_front;  // 左前轮编码器定时器
+    TIM_HandleTypeDef *htim_right_front; // 右前轮编码器定时器
+    TIM_HandleTypeDef *htim_right_rear;  // 右后轮编码器定时器
+    TIM_HandleTypeDef *htim_left_rear;   // 左后轮编码器定时器
 
-        // 1. 获取各轮原始计数（只读，故加const）
-        int32_t GetLeftFrontCount() const;
-        int32_t GetRightFrontCount() const;
-        int32_t GetRightRearCount() const;
-        int32_t GetLeftRearCount() const;
+    // 2. 采样数据：上次差值（用于位移计算）
+    int32_t last_lf_diff; // 左前轮上次采样计数差值
+    int32_t last_rf_diff; // 右前轮上次采样计数差值
+    int32_t last_rr_diff; // 右后轮上次采样计数差值
+    int32_t last_lr_diff; // 左后轮上次采样计数差值
 
-        // 2. 重置各轮原始计数
-        void ResetLeftFrontCount();
-        void ResetRightFrontCount();
-        void ResetRightRearCount();
-        void ResetLeftRearCount();
+    // 3. 时间数据：采样时刻（ms，基于HAL_GetTick()）
+    uint32_t last_sample_time;    // 上次采样时间
+    uint32_t current_sample_time; // 当前采样时间
 
-        // 3. 重置里程计（X/Y/旋转清零，同步更新全局变量）
-        void ResetOdometry();
+    // 4. 速度数据：各轮实时速度（单位：圈/秒）
+    float current_lf_vel; // 左前轮速度
+    float current_rf_vel; // 右前轮速度
+    float current_rr_vel; // 右后轮速度
+    float current_lr_vel; // 左后轮速度
+} Encoder;
 
-        // 4. 获取当前里程计数据（供外部C++文件调用，支持按需获取）
-        void GetOdometry(float *x, float *y, float *theta, uint32_t *time) const;
+// -------------------------- 核心接口函数声明 --------------------------
+/**
+ * @brief 编码器初始化（必须先调用，绑定硬件定时器）
+ * @param encoder：编码器结构体实例指针（外部定义，非NULL）
+ * @param htim_lf：左前轮定时器句柄（如&htim1）
+ * @param htim_rf：右前轮定时器句柄（如&htim2）
+ * @param htim_rr：右后轮定时器句柄（如&htim4）
+ * @param htim_lr：左后轮定时器句柄（如&htim3）
+ */
+void Encoder_Init(Encoder *encoder,
+                  TIM_HandleTypeDef *htim_lf,
+                  TIM_HandleTypeDef *htim_rf,
+                  TIM_HandleTypeDef *htim_rr,
+                  TIM_HandleTypeDef *htim_lr);
 
-        // 5. TIM6中断调用：采样并解算里程计（核心函数）
-        void SampleAndUpdate();
+/**
+ * @brief 编码器采样核心函数（建议中断调用，如定时器周期中断）
+ * @功能：1. 记录采样时间 2. 计算计数差值 3. 计算速度 4. 重置计数器防溢出
+ * @param encoder：编码器结构体实例指针（非NULL）
+ */
+void Encoder_Sample(Encoder *encoder);
 
-        // 6. 轮子速度接口
-        float GetLeftFrontWheelSpeed() const;
-        float GetRightFrontWheelSpeed() const;
-        float GetRightRearWheelSpeed() const;
-        float GetLeftRearWheelSpeed() const;
+// -------------------------- 速度获取接口 --------------------------
+/**
+ * @brief 获取左前轮速度（单位：圈/秒）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 速度值（float，正=正转，负=反转）
+ */
+float Encoder_GetLeftFrontVel(const Encoder *encoder);
 
-    private:
-        // 绑定编码器定时器句柄（与CubeMX配置一致，const确保不被修改）
-        TIM_HandleTypeDef *const htim_left_front = &htim1;  // 左前
-        TIM_HandleTypeDef *const htim_right_front = &htim2; // 右前
-        TIM_HandleTypeDef *const htim_right_rear = &htim4;  // 右后
-        TIM_HandleTypeDef *const htim_left_rear = &htim3;   // 左后
+/**
+ * @brief 获取右前轮速度（单位：圈/秒）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 速度值（float，正=正转，负=反转）
+ */
+float Encoder_GetRightFrontVel(const Encoder *encoder);
 
-        // 上一周期编码器计数（用于计算10ms内变化量，避免中断中丢失数据）
-        int32_t last_lf_count = 0;
-        int32_t last_rf_count = 0;
-        int32_t last_rr_count = 0;
-        int32_t last_lr_count = 0;
+/**
+ * @brief 获取右后轮速度（单位：圈/秒）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 速度值（float，正=正转，负=反转）
+ */
+float Encoder_GetRightRearVel(const Encoder *encoder);
 
-        // 类内里程计累加值（与全局变量同步，确保数据一致性）
-        float total_x = 0.0f;
-        float total_y = 0.0f;
-        float total_theta = 0.0f;
+/**
+ * @brief 获取左后轮速度（单位：圈/秒）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 速度值（float，正=正转，负=反转）
+ */
+float Encoder_GetLeftRearVel(const Encoder *encoder);
 
-        // 轮速缓存变量（2ms更新一次，与SampleAndUpdate()同步）
-        float left_front_speed_ = 0.0f;
-        float right_front_speed_ = 0.0f;
-        float right_rear_speed_ = 0.0f;
-        float left_rear_speed_ = 0.0f;
-    };
+// -------------------------- 采样时间获取接口 --------------------------
+/**
+ * @brief 获取上次采样时间（单位：ms，基于HAL_GetTick()）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 上次采样时刻（uint32_t）
+ */
+uint32_t Encoder_GetLastSampleTime(const Encoder *encoder);
 
-    // 全局编码器对象声明（供外部C++文件访问，定义在encoder.cpp中）
-    extern Encoder global_encoder;
-}
-#endif
+/**
+ * @brief 获取当前采样时间（单位：ms，基于HAL_GetTick()）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 当前采样时刻（uint32_t）
+ */
+uint32_t Encoder_GetCurrentSampleTime(const Encoder *encoder);
 
-#endif // ENCODER_H
+/**
+ * @brief 获取两次采样的时间差（单位：ms）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 时间差（uint32_t，自动处理HAL_GetTick()回卷）
+ */
+uint32_t Encoder_GetSampleTimeDiff(const Encoder *encoder);
+
+// -------------------------- 计数差值获取接口 --------------------------
+/**
+ * @brief 获取左前轮上次采样的计数差值（用于计算位移）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 计数差值（int32_t，正=正转，负=反转）
+ */
+int32_t Encoder_GetLastLeftFrontDiff(const Encoder *encoder);
+
+/**
+ * @brief 获取右前轮上次采样的计数差值（用于计算位移）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 计数差值（int32_t，正=正转，负=反转）
+ */
+int32_t Encoder_GetLastRightFrontDiff(const Encoder *encoder);
+
+/**
+ * @brief 获取右后轮上次采样的计数差值（用于计算位移）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 计数差值（int32_t，正=正转，负=反转）
+ */
+int32_t Encoder_GetLastRightRearDiff(const Encoder *encoder);
+
+/**
+ * @brief 获取左后轮上次采样的计数差值（用于计算位移）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ * @return 计数差值（int32_t，正=正转，负=反转）
+ */
+int32_t Encoder_GetLastLeftRearDiff(const Encoder *encoder);
+
+// -------------------------- 计数器重置接口 --------------------------
+/**
+ * @brief 重置左前轮编码器计数器（设为ENCODER_INIT_VAL）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ */
+void Encoder_ResetLeftFrontCount(Encoder *encoder);
+
+/**
+ * @brief 重置右前轮编码器计数器（设为ENCODER_INIT_VAL）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ */
+void Encoder_ResetRightFrontCount(Encoder *encoder);
+
+/**
+ * @brief 重置右后轮编码器计数器（设为ENCODER_INIT_VAL）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ */
+void Encoder_ResetRightRearCount(Encoder *encoder);
+
+/**
+ * @brief 重置左后轮编码器计数器（设为ENCODER_INIT_VAL）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ */
+void Encoder_ResetLeftRearCount(Encoder *encoder);
+
+/**
+ * @brief 重置所有编码器计数器（设为ENCODER_INIT_VAL）
+ * @param encoder：编码器结构体实例指针（非NULL）
+ */
+void Encoder_ResetAllCounts(Encoder *encoder);

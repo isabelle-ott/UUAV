@@ -1,29 +1,24 @@
 file(REMOVE_RECURSE
+  "SUPERCAR_STM32F407ZGT6.bin"
+  "SUPERCAR_STM32F407ZGT6.hex"
   "SUPERCAR_STM32F407ZGT6.map"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/system_stm32f4xx.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/ekf2position.cpp.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.cpp.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.cpp.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.cpp.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.cpp.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.cpp.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.cpp.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.cpp.obj"
-  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj"
+  "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj"
   "SUPERCAR_STM32F407ZGT6.elf"
   "SUPERCAR_STM32F407ZGT6.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang ASM C CXX)
+foreach(lang ASM C)
   include(CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

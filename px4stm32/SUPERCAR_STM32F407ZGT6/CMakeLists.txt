@@ -1,116 +1,87 @@
 cmake_minimum_required(VERSION 3.16)
 
-#
-# This file is generated only once,
-# and is not re-generated if converter is called multiple times.
-#
-# User is free to modify the file as much as necessary
-#
+# -------------------------- 基础配置 --------------------------
+# 项目名称
+set(CMAKE_PROJECT_NAME SUPERCAR_STM32F407ZGT6)
+project(${CMAKE_PROJECT_NAME})
 
-# Setup compiler settings
+# 编译标准（C11，兼容HAL库）
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS ON)
 
-# 添加 C++ 标准支持
-set(CMAKE_CXX_STANDARD 11) 
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS ON)
-
-# Define the build type
+# 构建类型（默认Debug，支持Release）
 if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE "Debug")
+    set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "Choose build type: Debug/Release" FORCE)
 endif()
+message("Build type: ${CMAKE_BUILD_TYPE}")
 
-# Set the project name
-set(CMAKE_PROJECT_NAME SUPERCAR_STM32F407ZGT6)
+# 启用汇编和C语言支持（STM32启动文件为汇编）
+enable_language(C ASM)
 
-# Enable compile command to ease indexing with e.g. clangd
+# 生成compile_commands.json，方便IDE索引（如VSCode、Clangd）
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
-# Core project settings
-project(${CMAKE_PROJECT_NAME})
-message("Build type: " ${CMAKE_BUILD_TYPE})
+# -------------------------- 工具链配置（若未单独配置需添加） --------------------------
+# 若使用ARM交叉编译工具链，需指定工具链路径（根据实际安装路径修改）
+if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cmake/gcc-arm-none-eabi.cmake" CACHE PATH "Toolchain file")
+endif()
 
-# Enable CMake support for ASM and C languages
-enable_language(C CXX ASM) 
+# -------------------------- 生成可执行文件 --------------------------
+# 创建ELF可执行文件（STM32的目标文件）
+add_executable(${CMAKE_PROJECT_NAME} "")
 
-# Create an executable object type
-add_executable(${CMAKE_PROJECT_NAME})
-
-# Add STM32CubeMX generated sources
+# -------------------------- 添加子模块（STM32CubeMX生成的驱动） --------------------------
 add_subdirectory(cmake/stm32cubemx)
 
-# Link directories setup
-target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined library search paths
-)
-
-# Add sources to executable
+# -------------------------- 添加用户自定义源文件（关键：User/Src下的所有文件） --------------------------
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    # User目录下的源文件
-    User/Src/ekf2position.cpp
-    User/Src/encoder.cpp
-    User/Src/imu.cpp
-    User/Src/light.cpp
-    User/Src/pid.cpp
-    User/Src/position_control.cpp
-    User/Src/init.cpp
-    User/Src/motor.cpp
-    
-    # 核心源文件
-    Core/Src/main.c
-    Core/Src/gpio.c
-    Core/Src/tim.c
-    Core/Src/usart.c
-    Core/Src/stm32f4xx_hal_msp.c
-    Core/Src/stm32f4xx_it.c
-    Core/Src/syscalls.c
-    Core/Src/sysmem.c
-    Core/Src/system_stm32f4xx.c
-    
-    # 汇编启动文件
-    startup_stm32f407xx.s
+    # User/Src下的所有用户文件，按实际文件补充
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/init.c          # 包含All_Init函数
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/motor.c         # 电机驱动实现
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/motor_control.c # 电机控制逻辑
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/pid.c           # PID算法实现
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/encoder.c       # 编码器实现
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/encoder_odom.c  # 编码器里程计
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/imu.c           # IMU驱动
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/imu_odom.c      # IMU里程计
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/odom.c          # 里程计融合
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/position_control.c # 位置控制
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/light.c         # 灯光控制
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/it_cb.c         # 中断回调
 )
 
-# Add include paths
+# -------------------------- 用户头文件路径（User/Inc） --------------------------
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # User目录下头文件
-    User/Inc
-    
-    # 核心头文件目录
-    Core/Inc
-    Drivers/STM32F4xx_HAL_Driver/Inc
-    Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
-    Drivers/CMSIS/Include
-    Drivers/CMSIS/Device/ST/STM32F4xx/Include
-    
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Inc  # 让编译器找到User/Inc下的.h文件
 )
 
-# Add project symbols (macros)
-target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
-    STM32F407xx           # 芯片型号
-    USE_HAL_DRIVER        # 启用HAL库
-    __FPU_PRESENT=1U      # 启用浮点单元
-    ARM_MATH_CM4          # 告诉DSP库当前内核是Cortex-M4
-    ARM_MATH_MATRIX_CHECK # 可选：启用DSP矩阵检查(调试用)
-    ARM_MATH_ROUNDING     # 可选：启用DSP舍入功能
-)
-
-# Remove wrong libob.a library dependency when using cpp files
+# -------------------------- 链接配置 --------------------------
+# 移除无用的ob库依赖（避免C++编译冲突，若用C则可选）
 list(REMOVE_ITEM CMAKE_C_IMPLICIT_LINK_LIBRARIES ob)
 
-# Add linked libraries
+# 链接核心库（stm32cubemx包含HAL库和基础配置）
 target_link_libraries(${CMAKE_PROJECT_NAME}
-    stm32cubemx
-
-    # Add user defined libraries
+    PRIVATE
+    stm32cubemx  # 来自cmake/stm32cubemx的接口库
+    -lm
 )
 
-# 添加生成bin和hex文件的命令
-# add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
-#     COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.bin
-#     COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.hex
-#     COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.bin ${CMAKE_PROJECT_NAME}.hex
-#     COMMENT "Generated: ${CMAKE_PROJECT_NAME}.bin ${CMAKE_PROJECT_NAME}.hex"
-# )
+# -------------------------- 生成HEX和BIN文件（下载到STM32用） --------------------------
+# 从ELF生成HEX文件
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.hex
+    COMMENT "Generating ${CMAKE_PROJECT_NAME}.hex"
+)
+
+# 从ELF生成BIN文件
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.bin
+    COMMENT "Generating ${CMAKE_PROJECT_NAME}.bin"
+)
+
+# -------------------------- 清理目标（可选） --------------------------
+set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
+    ADDITIONAL_CLEAN_FILES "${CMAKE_PROJECT_NAME}.hex;${CMAKE_PROJECT_NAME}.bin;${CMAKE_PROJECT_NAME}.map"
+)
