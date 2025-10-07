@@ -3,6 +3,7 @@
 #include "stdio.h" // 串口打印函数（printf）依赖（需确保串口已初始化）
 #include <stdint.h>
 #include <math.h>
+#include "usart.h" // 包含UART2句柄定义（&huart2）
 
 // 1. 原有全局实例定义
 Encoder encoder_;
@@ -17,6 +18,20 @@ PID_Controller lr_pid;
 PID_Controller base_position_pid;
 
 MotorControl motor_control_;
+
+PositionControl position_control_;
+
+UartPi uart_pi_;
+
+// 麦轮硬件参数（必须与实际一致！）
+#define WHEEL_RADIUS 0.034f // 34mm
+#define WHEEL_TRACK 0.230f  // 230mm（左右轮距）
+#define WHEEL_BASE 0.094f   // 94mm（前后轴距）
+#define ENCODER_RES 17000   // 编码器分辨率（线数×减速比，需按实际修改）
+
+// 位置控制参数定义
+#define MAX_LINEAR_SPEED 0.5f      // 最大线速度(m/s)
+#define MAX_ANGULAR_SPEED M_PI / 4 // 最大角速度(rad/s)
 
 // -------------------------- PID参数配置（根据实际硬件调整） --------------------------
 // 速度PID参数（增量式，输出限幅±100对应电机PWM占空比）
@@ -87,7 +102,11 @@ void All_Init(void)
     Motor_StartPWM(&motor_);                                               // 启动PWM（依赖CubeMX初始化的定时器）
 
     // 3. 编码器里程计初始化（原逻辑）
-    EncoderOdom_Init(&encoder_odom_, 0.035f, 0.25f, 0.30f, 17000);
+    EncoderOdom_Init(&encoder_odom_,
+                     WHEEL_RADIUS,
+                     WHEEL_TRACK,
+                     WHEEL_BASE,
+                     ENCODER_RES);
 
     // 4. PID初始化（新增，调用PID_All_Init）
     PID_All_Init();
@@ -103,8 +122,13 @@ void All_Init(void)
                       MC_PID_OUTPUT_LIMIT,   // PID输出限幅
                       MC_CONTROL_FREQ);      // 控制频率
 
-    // 5. 采样定时器初始化（原逻辑）
+    LightInit();
+    PositionControl_Init(&position_control_, &motor_control_);
+
+    // 5. 采样定时器初始化
     HAL_TIM_Base_Start_IT(&htim6);
+
+    UartPi_Init(&uart_pi_, &huart2);
 }
 
 // 3. 编码器测试函数实现（新增）
@@ -455,4 +479,153 @@ void motor_control_test(MotorControl *mc, uint32_t test_duration_ms)
         else
             printf("评估结果：需优化（最大平均误差≥0.3r/s，建议调整PID参数）\r\n\r\n");
     }
+}
+
+void position_control_test(PositionControl *pc, uint32_t total_test_time_ms)
+{
+    if (pc == NULL)
+    {
+        printf("[Position Control Test] 无效的位置控制实例指针\r\n");
+        return;
+    }
+
+    printf("========================================\r\n");
+    printf("开始位置控制测试，总时长: %lu ms\r\n", total_test_time_ms);
+    printf("测试将执行一系列移动和旋转动作\r\n");
+    printf("========================================\r\n");
+
+    uint32_t start_time = HAL_GetTick();
+    uint32_t current_time = start_time;
+    float x, y, angle;
+
+    // 测试步骤计数器
+    uint8_t test_step = 0;
+
+    // 测试主循环
+    while (current_time - start_time < total_test_time_ms)
+    {
+        // 获取当前位置并打印
+        PositionControl_GetPosition(pc, &x, &y, &angle);
+        printf("[%lu ms] 位置: X=%.2f m, Y=%.2f m, 角度=%.2f° | 测试步骤: %d\r\n",
+               current_time - start_time,
+               x, y, angle * 180.0f / M_PI,
+               test_step);
+
+        // 根据测试步骤执行不同动作
+        switch (test_step)
+        {
+        case 0:
+            // 步骤0: 移动到(0.5, 0)位置（x正方向移动0.5米）
+            printf("步骤0: 移动到X=0.5m, Y=0m位置\r\n");
+            PositionControl_SetPosition(pc, 0.5f, 0.0f, 0.3f);
+            test_step++;
+            break;
+
+        case 1:
+            // 步骤1: 等待到达位置或超时(5秒)
+            if (!pc->is_moving || current_time - start_time > 5000)
+            {
+                printf("步骤1: 到达X=0.5m位置或超时\r\n");
+                test_step++;
+            }
+            break;
+
+        case 2:
+            // 步骤2: 移动到(0.5, 0.5)位置（y正方向移动0.5米）
+            printf("步骤2: 移动到X=0.5m, Y=0.5m位置\r\n");
+            PositionControl_SetPosition(pc, 0.5f, 0.5f, 0.3f);
+            test_step++;
+            break;
+
+        case 3:
+            // 步骤3: 等待到达位置或超时(5秒)
+            if (!pc->is_moving || current_time - start_time > 10000)
+            {
+                printf("步骤3: 到达X=0.5m, Y=0.5m位置或超时\r\n");
+                test_step++;
+            }
+            break;
+
+        case 4:
+            // 步骤4: 旋转90度（顺时针）
+            printf("步骤4: 顺时针旋转90度\r\n");
+            PositionControl_SetAngle(pc, M_PI / 2, M_PI / 4);
+            test_step++;
+            break;
+
+        case 5:
+            // 步骤5: 等待旋转完成或超时(3秒)
+            if (!pc->is_moving || current_time - start_time > 13000)
+            {
+                printf("步骤5: 旋转完成或超时\r\n");
+                test_step++;
+            }
+            break;
+
+        case 6:
+            // 步骤6: 移动到(0, 0.5)位置（x负方向移动0.5米）
+            printf("步骤6: 移动到X=0m, Y=0.5m位置\r\n");
+            PositionControl_SetPosition(pc, 0.0f, 0.5f, 0.3f);
+            test_step++;
+            break;
+
+        case 7:
+            // 步骤7: 等待到达位置或超时(5秒)
+            if (!pc->is_moving || current_time - start_time > 18000)
+            {
+                printf("步骤7: 到达X=0m, Y=0.5m位置或超时\r\n");
+                test_step++;
+            }
+            break;
+
+        case 8:
+            // 步骤8: 旋转-90度（逆时针）
+            printf("步骤8: 逆时针旋转90度\r\n");
+            PositionControl_SetAngle(pc, -M_PI / 2, M_PI / 4);
+            test_step++;
+            break;
+
+        case 9:
+            // 步骤9: 等待旋转完成或超时(3秒)
+            if (!pc->is_moving || current_time - start_time > 21000)
+            {
+                printf("步骤9: 旋转完成或超时\r\n");
+                test_step++;
+            }
+            break;
+
+        case 10:
+            // 步骤10: 回到原点(0, 0)
+            printf("步骤10: 返回原点(0, 0)\r\n");
+            PositionControl_SetPosition(pc, 0.0f, 0.0f, 0.3f);
+            test_step++;
+            break;
+
+        case 11:
+            // 步骤11: 等待到达位置或超时(5秒)
+            if (!pc->is_moving || current_time - start_time > 26000)
+            {
+                printf("步骤11: 到达原点或超时\r\n");
+                test_step++;
+            }
+            break;
+
+        default:
+            // 所有步骤完成，保持停止状态
+            PositionControl_Stop(pc);
+            break;
+        }
+
+        // 延时一小段时间，降低CPU占用
+        HAL_Delay(100);
+        current_time = HAL_GetTick();
+    }
+
+    // 测试结束，停止所有运动
+    PositionControl_Stop(pc);
+    printf("========================================\r\n");
+    printf("位置控制测试结束\r\n");
+    printf("最终位置: X=%.2f m, Y=%.2f m, 角度=%.2f°\r\n",
+           x, y, angle * 180.0f / M_PI);
+    printf("========================================\r\n");
 }

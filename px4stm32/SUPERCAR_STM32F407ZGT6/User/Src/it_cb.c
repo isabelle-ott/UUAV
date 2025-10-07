@@ -16,5 +16,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
         // 计算里程计
         EncoderOdom_Calculate(&encoder_odom_);
+
+        MotorControl_Loop(&motor_control_);
+
+        PositionControl_Loop(&position_control_); // 位置控制闭环（同频率）
     }
 }

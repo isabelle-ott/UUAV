@@ -361,10 +361,12 @@ cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../Use
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../User/Inc/imu_odom.h
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../User/Inc/init.h
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../User/Inc/it_cb.h
+cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../User/Inc/light.h
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../User/Inc/motor.h
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../User/Inc/motor_control.h
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../User/Inc/odom.h
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../User/Inc/pid.h
+cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../User/Inc/position_control.h
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj: ../Core/Src/main.c
 
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Inc/main.h

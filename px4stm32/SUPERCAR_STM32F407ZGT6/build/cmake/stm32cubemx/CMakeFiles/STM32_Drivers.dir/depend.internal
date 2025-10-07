@@ -362,10 +362,12 @@ cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj
  ../User/Inc/imu_odom.h
  ../User/Inc/init.h
  ../User/Inc/it_cb.h
+ ../User/Inc/light.h
  ../User/Inc/motor.h
  ../User/Inc/motor_control.h
  ../User/Inc/odom.h
  ../User/Inc/pid.h
+ ../User/Inc/position_control.h
  /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/main.c
 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_hal_msp.c.obj
  ../Core/Inc/main.h

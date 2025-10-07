@@ -1,3 +1,16 @@
+/*
+// 设置所有电机以2r/s速度运行
+MotorControl_SetTargetVel(&motor_control_, MOTOR_LF, 2.0f);
+MotorControl_SetTargetVel(&motor_control_, MOTOR_RF, 2.0f);
+MotorControl_SetTargetVel(&motor_control_, MOTOR_RR, 2.0f);
+MotorControl_SetTargetVel(&motor_control_, MOTOR_LR, 2.0f);
+
+// 运行5秒后停止
+HAL_Delay(5000);
+MotorControl_StopAll(&motor_control_);
+
+*/
+
 #ifndef MOTOR_CONTROL_H
 #define MOTOR_CONTROL_H
 

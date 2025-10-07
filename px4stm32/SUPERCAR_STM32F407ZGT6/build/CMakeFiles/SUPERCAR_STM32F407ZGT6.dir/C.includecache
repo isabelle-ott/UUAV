@@ -801,8 +801,12 @@ pid.h
 ../User/Inc/pid.h
 motor_control.h
 ../User/Inc/motor_control.h
+position_control.h
+../User/Inc/position_control.h
 it_cb.h
 ../User/Inc/it_cb.h
+light.h
+../User/Inc/light.h
 
 ../User/Inc/it_cb.h
 main.h
@@ -825,6 +829,10 @@ pid.h
 ../User/Inc/pid.h
 motor_control.h
 ../User/Inc/motor_control.h
+
+../User/Inc/light.h
+stm32f4xx_hal.h
+../User/Inc/stm32f4xx_hal.h
 
 ../User/Inc/motor.h
 main.h
@@ -856,6 +864,20 @@ stm32f4xx_hal.h
 stdint.h
 -
 
+../User/Inc/position_control.h
+motor_control.h
+../User/Inc/motor_control.h
+stdint.h
+../User/Inc/stdint.h
+
+/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder_odom.c
+encoder_odom.h
+/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder_odom.h
+stm32f4xx_hal.h
+/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/stm32f4xx_hal.h
+math.h
+-
+
 /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.c
 init.h
 /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.h
@@ -875,16 +897,4 @@ init.h
 /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.h
 encoder.h
 /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.h
-
-/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor.c
-motor.h
-/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor.h
-
-/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor_control.c
-motor_control.h
-/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor_control.h
-stm32f4xx_hal.h
-/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/stm32f4xx_hal.h
-math.h
--
 
