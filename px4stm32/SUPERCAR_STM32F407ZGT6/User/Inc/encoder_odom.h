@@ -1,3 +1,5 @@
+// 待修改完善轴距等
+
 #ifndef ENCODER_ODOM_H
 #define ENCODER_ODOM_H
 
@@ -16,7 +18,7 @@ typedef struct
 // 编码器里程计结构体
 typedef struct
 {
-    // 硬件参数（麦轮专用）
+    // 硬件参数
     float wheel_radius;         // 轮子半径(米) - 34mm = 0.034f
     float wheel_track;          // 轮距(米) - 左右轮间距230mm = 0.230f
     float wheel_base;           // 轴距(米) - 前后轮间距94mm = 0.094f
@@ -50,7 +52,7 @@ void EncoderOdom_Calculate(EncoderOdom *odom);
 // 重置里程计（归零x/y/theta）
 void EncoderOdom_Reset(EncoderOdom *odom);
 
-// 数据获取接口（函数形式）
+// 数据获取接口
 float EncoderOdom_GetX(const EncoderOdom *odom);
 float EncoderOdom_GetY(const EncoderOdom *odom);
 float EncoderOdom_GetTheta(const EncoderOdom *odom);

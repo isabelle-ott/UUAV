@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "can.h"
+#include "dma.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -26,7 +27,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "init.h"
-#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,11 +53,49 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+extern Encoder encoder_;
+extern Motor motor_;
+extern EncoderOdom encoder_odom_;
+
+extern JY61P_Acc g_jy61p_acc;
+extern JY61P_Gyro g_jy61p_gyro;
+extern JY61P_Angle g_jy61p_angle;
+extern JY61P_Tim g_jy61p_Tim;
+extern PID_Controller lf_pid;
+extern PID_Controller rf_pid;
+extern PID_Controller rr_pid;
+extern PID_Controller lr_pid;
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+void pid_velocity_test(PID_Controller *pid, float target_speed, uint32_t test_time_ms)
+{
+  if (pid == NULL || test_time_ms == 0)
+    return;
+
+  uint32_t start_time = HAL_GetTick();
+
+  while (HAL_GetTick() - start_time < test_time_ms)
+  {
+    // 1. 假设从编码器获取速度反馈（此处用模拟反馈，实际需替换为真实编码器速度）
+    float feedback_speed = 0.8f * pid->target + 0.2f * sinf(HAL_GetTick() / 1000.0f); // 模拟扰动
+
+    // 2. 设置PID目标值与反馈值
+    PID_SetTarget(pid, target_speed);
+    PID_SetFeedback(pid, feedback_speed);
+
+    // 3. PID计算
+    float output = PID_Calculate(pid);
+
+    HAL_Delay(50); // 50ms周期计算
+  }
+
+  // 测试结束，重置PID
+  PID_Reset(pid);
+}
 
 /* USER CODE END 0 */
 
@@ -90,6 +128,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM1_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
@@ -105,48 +144,21 @@ int main(void)
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   All_Init();
-
-  // 5等待1秒，确保所有模块稳定初始化
-  HAL_Delay(1000);
-  printf("所有模块初始化完成，开始执行测试流程...\r\n\r\n");
-
-  // -------------------------- 阶段1：测试编码器（底层硬件） --------------------------
-  printf("===================== 开始编码器测试（持续5秒） =====================\r\n");
-  uint32_t encoder_test_start = HAL_GetTick();
-  // 编码器测试：每500ms打印一次数据，持续5秒
-  while (HAL_GetTick() - encoder_test_start < 5000)
-  {
-    encoder_test(500); // 参数：打印间隔500ms
-    HAL_Delay(100);    // 降低CPU占用
-  }
-  printf("===================== 编码器测试结束 =====================\r\n\r\n");
-
-  // -------------------------- 阶段2：测试电机（开环控制） --------------------------
-  printf("===================== 开始电机测试（持续20秒） =====================\r\n");
-  // 电机测试：步骤时长1500ms（每个电机转动1.5秒），测试速度50（PWM占空比50%）
-  motor_test(&motor_, 1500, 50.0f);
-  printf("===================== 电机测试结束 =====================\r\n\r\n");
-
-  // -------------------------- 阶段3：测试电机控制（闭环控制） --------------------------
-  printf("===================== 开始电机控制测试（持续15秒） =====================\r\n");
-  // 电机控制测试：总时长15秒（分3阶段，每阶段5秒）
-  motor_control_test(&motor_control_, 15000);
-  printf("===================== 电机控制测试结束 =====================\r\n\r\n");
-
-  // -------------------------- 阶段4：测试位置控制（麦轮全向运动） --------------------------
-  printf("===================== 开始位置控制测试（持续30秒） =====================\r\n");
-  // 位置控制测试：总时长30秒（执行移动→旋转→返回原点全流程）
-  position_control_test(&position_control_, 30000);
-  printf("===================== 位置控制测试结束 =====================\r\n\r\n");
-
-  // -------------------------- 测试完成：进入主循环（空闲状态） --------------------------
-  printf("所有测试流程执行完成，进入空闲状态...\r\n");
+  int test = 50;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    while (test != 0)
+    {
+      test--;
+    }
+
+    test = 50;
+    pid_velocity_test(&base_position_pid, 50, 50000);
+    // Motor_SetLeftFrontVel(&motor_, test); // 取绝对值=正转
 
     /* USER CODE END WHILE */
 

@@ -1,35 +1,39 @@
 #include "init.h"
-#include "tim.h"   // 定时器句柄定义
-#include "stdio.h" // 串口打印函数（printf）依赖（需确保串口已初始化）
+#include "tim.h"
+#include "stdio.h"
 #include <stdint.h>
 #include <math.h>
-#include "usart.h" // 包含UART2句柄定义（&huart2）
+#include "usart.h"
+#include "dma.h"
 
-// 1. 原有全局实例定义
+// 已测试
 Encoder encoder_;
 Motor motor_;
 EncoderOdom encoder_odom_;
-
-// 2. PID实例定义（直接声明，与lf_pid等名称对应）
 PID_Controller lf_pid;
 PID_Controller rf_pid;
 PID_Controller rr_pid;
 PID_Controller lr_pid;
 PID_Controller base_position_pid;
 
+// 未测试
 MotorControl motor_control_;
-
 PositionControl position_control_;
 
 UartPi uart_pi_;
 
-// 麦轮硬件参数（必须与实际一致！）
+JY61P_Acc g_jy61p_acc = {0};
+JY61P_Gyro g_jy61p_gyro = {0};
+JY61P_Angle g_jy61p_angle = {0};
+JY61P_Tim g_jy61p_Tim = {0};
+
+uint8_t rx_buffer = 0;
+
 #define WHEEL_RADIUS 0.034f // 34mm
 #define WHEEL_TRACK 0.230f  // 230mm（左右轮距）
 #define WHEEL_BASE 0.094f   // 94mm（前后轴距）
 #define ENCODER_RES 17000   // 编码器分辨率（线数×减速比，需按实际修改）
 
-// 位置控制参数定义
 #define MAX_LINEAR_SPEED 0.5f      // 最大线速度(m/s)
 #define MAX_ANGULAR_SPEED M_PI / 4 // 最大角速度(rad/s)
 
@@ -54,7 +58,7 @@ UartPi uart_pi_;
 #define MC_PID_KD 0.15f             // PID微分系数（抑制超调）
 #define MC_PID_INTEGRAL_LIMIT 60.0f // PID积分限幅（防止积分饱和）
 #define MC_PID_OUTPUT_LIMIT 100.0f  // PID输出限幅（±100对应PWM占空比）
-#define MC_CONTROL_FREQ 100U        // 控制频率（100Hz=10ms周期）
+#define MC_CONTROL_FREQ 500U        // 控制频率（500Hz=2ms周期）
 
 // -------------------------- 初始化所有PID实例 --------------------------
 static void PID_All_Init(void)
@@ -82,36 +86,36 @@ static void PID_All_Init(void)
              PID_POSITION_INTEGRAL_LIMIT, PID_POSITION_OUTPUT_LIMIT);
 }
 
-// 2. 全初始化函数（原逻辑保留）
+// 2. 全初始化函数
 // -------------------------- 全初始化函数（整合PID初始化） --------------------------
 void All_Init(void)
 {
-    // 1. 编码器初始化（原逻辑）
+    // 电机初始化
+    MotorSingleConfig lf_cfg = {GPIOB, GPIO_PIN_0, TIM_CHANNEL_1};  // 左前：方向引脚GPIOB_PIN_0，PWM通道1
+    MotorSingleConfig rf_cfg = {GPIOD, GPIO_PIN_0, TIM_CHANNEL_3};  // 右前：方向引脚GPIOD_PIN_0，PWM通道3
+    MotorSingleConfig rr_cfg = {GPIOE, GPIO_PIN_0, TIM_CHANNEL_2};  // 右后：方向引脚GPIOE_PIN_0，PWM通道2
+    MotorSingleConfig lr_cfg = {GPIOB, GPIO_PIN_10, TIM_CHANNEL_4}; // 左后：方向引脚GPIOB_PIN_10，PWM通道4
+    Motor_Init(&motor_, &htim5, 2099, &lf_cfg, &rf_cfg, &rr_cfg, &lr_cfg);
+    Motor_StartPWM(&motor_);
+
+    // 编码器初始化
     Encoder_Init(&encoder_, &htim1, &htim2, &htim4, &htim3);
     HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
     HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
     HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
     HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
 
-    // init.c 中的电机初始化（无需修改，仅参数绑定）
-    MotorSingleConfig lf_cfg = {GPIOB, GPIO_PIN_0, TIM_CHANNEL_1};         // 左前：方向引脚GPIOB_PIN_0，PWM通道1
-    MotorSingleConfig rf_cfg = {GPIOD, GPIO_PIN_0, TIM_CHANNEL_3};         // 右前：方向引脚GPIOD_PIN_0，PWM通道3
-    MotorSingleConfig rr_cfg = {GPIOE, GPIO_PIN_0, TIM_CHANNEL_2};         // 右后：方向引脚GPIOE_PIN_0，PWM通道2
-    MotorSingleConfig lr_cfg = {GPIOB, GPIO_PIN_10, TIM_CHANNEL_4};        // 左后：方向引脚GPIOB_PIN_10，PWM通道4
-    Motor_Init(&motor_, &htim5, 1999, &lf_cfg, &rf_cfg, &rr_cfg, &lr_cfg); // 绑定参数（ARR=1999，与CubeMX一致）
-    Motor_StartPWM(&motor_);                                               // 启动PWM（依赖CubeMX初始化的定时器）
-
-    // 3. 编码器里程计初始化（原逻辑）
+    // 编码器里程计初始化
     EncoderOdom_Init(&encoder_odom_,
                      WHEEL_RADIUS,
                      WHEEL_TRACK,
                      WHEEL_BASE,
                      ENCODER_RES);
 
-    // 4. PID初始化（新增，调用PID_All_Init）
+    // PID初始化（调用PID_All_Init）
     PID_All_Init();
 
-    // 4. MotorControl初始化（核心：绑定电机+编码器+PID参数）
+    // MotorControl初始化（核心：绑定电机+编码器+PID参数）
     MotorControl_Init(&motor_control_,
                       &motor_,               // 绑定电机实例
                       &encoder_,             // 绑定编码器实例
@@ -129,171 +133,11 @@ void All_Init(void)
     HAL_TIM_Base_Start_IT(&htim6);
 
     UartPi_Init(&uart_pi_, &huart2);
+
+    JY61P_Init(&huart3);
+    HAL_UART_Receive_DMA(&huart3, &rx_buffer, 1);
 }
 
-// 3. 编码器测试函数实现（新增）
-void encoder_test(uint32_t print_interval_ms)
-{
-    // 局部变量：记录上次打印时间（避免高频打印）
-    static uint32_t last_print_time = 0;
-    // 当前时间（基于HAL_GetTick()，与编码器采样时间同步）
-    uint32_t current_time = HAL_GetTick();
-
-    // 按设定间隔打印（避免占用过多CPU资源）
-    if ((current_time - last_print_time) < print_interval_ms)
-    {
-        return;
-    }
-    last_print_time = current_time; // 更新上次打印时间
-
-    // -------------------------- 1. 获取编码器关键数据 --------------------------
-    // 1.1 各轮上次采样计数差值（用于判断正反转）
-    int32_t lf_diff = Encoder_GetLastLeftFrontDiff(&encoder_);
-    int32_t rf_diff = Encoder_GetLastRightFrontDiff(&encoder_);
-    int32_t rr_diff = Encoder_GetLastRightRearDiff(&encoder_);
-    int32_t lr_diff = Encoder_GetLastLeftRearDiff(&encoder_);
-
-    // 1.2 采样时间信息（判断采样是否正常）
-    uint32_t last_sample_t = Encoder_GetLastSampleTime(&encoder_);
-    uint32_t curr_sample_t = Encoder_GetCurrentSampleTime(&encoder_);
-    uint32_t time_diff = Encoder_GetSampleTimeDiff(&encoder_);
-
-    // 1.3 各轮实时速度（单位：圈/秒，可后续转换为m/s）
-    float lf_vel = Encoder_GetLeftFrontVel(&encoder_);
-    float rf_vel = Encoder_GetRightFrontVel(&encoder_);
-    float rr_vel = Encoder_GetRightRearVel(&encoder_);
-    float lr_vel = Encoder_GetLeftRearVel(&encoder_);
-
-    // -------------------------- 2. 串口打印测试数据 --------------------------
-    // 格式说明：清晰区分各轮数据，标注单位，便于调试
-    printf("===================== 编码器测试数据 =====================\r\n");
-    // 时间信息
-    printf("采样时间：上次=%lu ms | 当前=%lu ms | 间隔=%lu ms\r\n",
-           last_sample_t, curr_sample_t, time_diff);
-    // 计数差值（正=正转，负=反转，0=静止）
-    printf("计数差值：左前=%ld | 右前=%ld | 右后=%ld | 左后=%ld\r\n",
-           lf_diff, rf_diff, rr_diff, lr_diff);
-    // 实时速度（保留2位小数，直观查看转速）
-    printf("实时速度：左前=%.2f r/s | 右前=%.2f r/s | 右后=%.2f r/s | 左后=%.2f r/s\r\n",
-           lf_vel, rf_vel, rr_vel, lr_vel);
-    printf("==========================================================\r\n\r\n");
-}
-
-// -------------------------- 电机测试函数实现 --------------------------
-void motor_test(Motor *motor, uint32_t test_step_duration_ms, float test_speed)
-{
-    // 1. 入参合法性检查（异常保护，避免空指针/参数越界）
-    if (motor == NULL)
-    {
-        printf("[ERROR] motor_test: Motor实例指针为空！\r\n");
-        return;
-    }
-    if (test_step_duration_ms < 500) // 最小持续时间500ms，确保肉眼可观测
-        test_step_duration_ms = 500;
-    if (test_speed > 100.0f) // 速度限制在±100%占空比
-        test_speed = 100.0f;
-    if (test_speed < -100.0f)
-        test_speed = -100.0f;
-
-    // 2. 打印测试配置信息（串口输出，便于调试）
-    printf("===================== 电机测试启动 =====================\r\n");
-    printf("测试参数：步骤时长=%lu ms | 测试速度=%.1f（正=正转，负=反转）\r\n",
-           test_step_duration_ms, test_speed);
-    printf("测试流程：1.单电机正转→2.单电机反转→3.多电机协同→4.全部停止\r\n");
-    printf("==========================================================\r\n");
-
-    // 3. 步骤1：单个电机正转测试（按左前→右前→右后→左后顺序）
-    printf("[步骤1/4] 单个电机正转测试（速度=%.1f）...\r\n", fabsf(test_speed));
-
-    // 左前电机正转
-    printf("  - 左前电机正转...\r\n");
-    Motor_SetLeftFrontVel(motor, fabsf(test_speed)); // 取绝对值=正转
-    HAL_Delay(test_step_duration_ms);
-    Motor_SetLeftFrontVel(motor, 0.0f); // 停止当前电机
-    HAL_Delay(300);                     // 间隔300ms，避免电机切换过快
-
-    // 右前电机正转
-    printf("  - 右前电机正转...\r\n");
-    Motor_SetRightFrontVel(motor, fabsf(test_speed));
-    HAL_Delay(test_step_duration_ms);
-    Motor_SetRightFrontVel(motor, 0.0f);
-    HAL_Delay(300);
-
-    // 右后电机正转
-    printf("  - 右后电机正转...\r\n");
-    Motor_SetRightRearVel(motor, fabsf(test_speed));
-    HAL_Delay(test_step_duration_ms);
-    Motor_SetRightRearVel(motor, 0.0f);
-    HAL_Delay(300);
-
-    // 左后电机正转
-    printf("  - 左后电机正转...\r\n");
-    Motor_SetLeftRearVel(motor, fabsf(test_speed));
-    HAL_Delay(test_step_duration_ms);
-    Motor_SetLeftRearVel(motor, 0.0f);
-    HAL_Delay(500); // 步骤间间隔延长，区分测试阶段
-
-    // 4. 步骤2：单个电机反转测试（按左前→右前→右后→左后顺序）
-    printf("[步骤2/4] 单个电机反转测试（速度=%.1f）...\r\n", fabsf(test_speed));
-
-    // 左前电机反转
-    printf("  - 左前电机反转...\r\n");
-    Motor_SetLeftFrontVel(motor, -fabsf(test_speed)); // 负号=反转
-    HAL_Delay(test_step_duration_ms);
-    Motor_SetLeftFrontVel(motor, 0.0f);
-    HAL_Delay(300);
-
-    // 右前电机反转
-    printf("  - 右前电机反转...\r\n");
-    Motor_SetRightFrontVel(motor, -fabsf(test_speed));
-    HAL_Delay(test_step_duration_ms);
-    Motor_SetRightFrontVel(motor, 0.0f);
-    HAL_Delay(300);
-
-    // 右后电机反转
-    printf("  - 右后电机反转...\r\n");
-    Motor_SetRightRearVel(motor, -fabsf(test_speed));
-    HAL_Delay(test_step_duration_ms);
-    Motor_SetRightRearVel(motor, 0.0f);
-    HAL_Delay(300);
-
-    // 左后电机反转
-    printf("  - 左后电机反转...\r\n");
-    Motor_SetLeftRearVel(motor, -fabsf(test_speed));
-    HAL_Delay(test_step_duration_ms);
-    Motor_SetLeftRearVel(motor, 0.0f);
-    HAL_Delay(500);
-
-    // 5. 步骤3：多电机协同测试（前进/后退，模拟实际运动场景）
-    printf("[步骤3/4] 多电机协同测试...\r\n");
-
-    // 所有电机正转=前进
-    printf("  - 所有电机正转（前进）...\r\n");
-    Motor_SetLeftFrontVel(motor, fabsf(test_speed) * 0.8f); // 可微调速度，避免跑偏
-    Motor_SetRightFrontVel(motor, fabsf(test_speed) * 0.8f);
-    Motor_SetRightRearVel(motor, fabsf(test_speed) * 0.8f);
-    Motor_SetLeftRearVel(motor, fabsf(test_speed) * 0.8f);
-    HAL_Delay(test_step_duration_ms * 1.5f); // 持续时间延长1.5倍
-
-    // 所有电机反转=后退
-    printf("  - 所有电机反转（后退）...\r\n");
-    Motor_SetLeftFrontVel(motor, -fabsf(test_speed) * 0.6f); // 后退速度降低，提高安全性
-    Motor_SetRightFrontVel(motor, -fabsf(test_speed) * 0.6f);
-    Motor_SetRightRearVel(motor, -fabsf(test_speed) * 0.6f);
-    Motor_SetLeftRearVel(motor, -fabsf(test_speed) * 0.6f);
-    HAL_Delay(test_step_duration_ms * 1.5f);
-
-    // 停止所有电机
-    Motor_StopAll(motor);
-    HAL_Delay(500);
-
-    // 6. 步骤4：测试结束，强制停止所有电机
-    printf("[步骤4/4] 测试结束，强制停止所有电机！\r\n");
-    Motor_StopAll(motor);
-    printf("==========================================================\r\n\r\n");
-}
-
-// 新增里程计测试函数
 void odom_test(const EncoderOdom *odom, uint32_t print_interval_ms)
 {
     static uint32_t last_print_time = 0;
@@ -317,40 +161,7 @@ void odom_test(const EncoderOdom *odom, uint32_t print_interval_ms)
     printf("==========================================================\r\n\r\n");
 }
 
-// -------------------------- PID速度测试函数（可选） --------------------------
-void pid_velocity_test(PID_Controller *pid, float target_speed, uint32_t test_time_ms)
-{
-    if (pid == NULL || test_time_ms == 0)
-        return;
-
-    uint32_t start_time = HAL_GetTick();
-    printf("PID速度测试开始：目标速度=%.1f r/s，持续时间=%lu ms\r\n", target_speed, test_time_ms);
-
-    while (HAL_GetTick() - start_time < test_time_ms)
-    {
-        // 1. 假设从编码器获取速度反馈（此处用模拟反馈，实际需替换为真实编码器速度）
-        float feedback_speed = 0.8f * pid->target + 0.2f * sinf(HAL_GetTick() / 1000.0f); // 模拟扰动
-
-        // 2. 设置PID目标值与反馈值
-        PID_SetTarget(pid, target_speed);
-        PID_SetFeedback(pid, feedback_speed);
-
-        // 3. PID计算
-        float output = PID_Calculate(pid);
-
-        // 4. 打印PID状态
-        printf("目标:%.1f | 反馈:%.1f | 输出:%.1f\r\n",
-               pid->target, pid->feedback, output);
-
-        HAL_Delay(50); // 50ms周期计算
-    }
-
-    // 测试结束，重置PID
-    PID_Reset(pid);
-    printf("PID速度测试结束！\r\n\r\n");
-}
-
-// -------------------------- 电机控制测试函数（验证闭环控制） --------------------------
+// -------------------------- 电机控制测试函数 --------------------------
 void motor_control_test(MotorControl *mc, uint32_t test_duration_ms)
 {
     if (mc == NULL || test_duration_ms == 0)

@@ -2,7 +2,7 @@
 #include "init.h"    // 包含encoder_全局变量声明
 #include "encoder.h" // 包含Encoder_Sample函数声明
 
-// TIM6中断回调函数（采样周期由TIM6的ARR值决定，如10ms采样一次）
+// TIM6中断回调函数
 // 在定时器中断回调中
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
@@ -17,8 +17,20 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         // 计算里程计
         EncoderOdom_Calculate(&encoder_odom_);
 
-        MotorControl_Loop(&motor_control_);
+        // MotorControl_Loop(&motor_control_);
 
-        PositionControl_Loop(&position_control_); // 位置控制闭环（同频率）
+        // PositionControl_Loop(&position_control_);
+    }
+}
+
+extern uint8_t rx_buffer;
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if (huart->Instance == USART3)
+    {
+        JY61P_ParseData(rx_buffer);
+        // 重新启动DMA接收
+        HAL_UART_Receive_DMA(&huart3, &rx_buffer, 1);
     }
 }

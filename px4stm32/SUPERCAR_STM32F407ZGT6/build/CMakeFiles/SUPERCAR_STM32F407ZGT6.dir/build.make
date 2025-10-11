@@ -57,74 +57,170 @@ include CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj: ../User/Src/init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.c
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj: ../Core/Src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/main.c
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.i"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.i
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/main.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.i
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.s"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.s
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/main.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.s
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj: ../User/Src/motor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor.c
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.obj: ../Core/Src/gpio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/gpio.c
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.i"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.i
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/gpio.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.i
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.s"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.s
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/gpio.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.s
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj: ../User/Src/motor_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor_control.c
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj: ../Core/Src/can.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/can.c
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.i"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor_control.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.i
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/can.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.i
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.s"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor_control.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.s
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/can.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.s
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj: ../User/Src/pid.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/pid.c
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.obj: ../Core/Src/dma.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/dma.c
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.i"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/pid.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.i
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/dma.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.i
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.s"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/pid.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.s
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/dma.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.s
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj: ../User/Src/encoder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.c
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.obj: ../Core/Src/tim.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/tim.c
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.i"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.i
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/tim.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.i
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.s"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.s
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/tim.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj: ../Core/Src/usart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/usart.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/usart.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/usart.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Src/stm32f4xx_it.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/stm32f4xx_it.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/stm32f4xx_it.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/stm32f4xx_it.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Src/stm32f4xx_hal_msp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/stm32f4xx_hal_msp.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/stm32f4xx_hal_msp.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/stm32f4xx_hal_msp.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj: ../Core/Src/sysmem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/sysmem.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/sysmem.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/sysmem.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj: ../Core/Src/syscalls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/syscalls.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/syscalls.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/syscalls.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj: ../startup_stm32f407xx.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building ASM object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/startup_stm32f407xx.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.obj: ../User/Src/arm_drive.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/arm_drive.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/arm_drive.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/arm_drive.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.obj: ../User/Src/arm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/arm.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/arm.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/arm.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.s
 
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.obj: ../User/Src/encoder_odom.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.obj"
 	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder_odom.c
 
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.i: cmake_force
@@ -135,22 +231,22 @@ CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.s"
 	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder_odom.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.s
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.obj: ../User/Src/imu.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.obj"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/imu.c
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj: ../User/Src/encoder.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.c
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.i"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/imu.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.i
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.i
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.s"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/imu.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.s
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.s
 
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.obj: ../User/Src/imu_odom.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.obj"
 	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/imu_odom.c
 
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.i: cmake_force
@@ -161,48 +257,22 @@ CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.s"
 	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/imu_odom.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.s
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj: ../User/Src/odom.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/odom.c
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj: ../User/Src/init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.c
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.i"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/odom.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.i
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.i
 
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.s"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/odom.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.s
-
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj: ../User/Src/position_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/position_control.c
-
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.i"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/position_control.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.i
-
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.s"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/position_control.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.s
-
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj: ../User/Src/light.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/light.c
-
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.i"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/light.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.i
-
-CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.s"
-	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/light.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.s
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.s
 
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj: ../User/Src/it_cb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj"
 	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/it_cb.c
 
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.i: cmake_force
@@ -213,100 +283,208 @@ CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.s"
 	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/it_cb.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.s
 
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj: ../User/Src/light.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/light.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/light.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/light.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj: ../User/Src/motor_control.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor_control.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor_control.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor_control.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj: ../User/Src/motor.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj: ../User/Src/odom.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/odom.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/odom.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/odom.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj: ../User/Src/pid.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/pid.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/pid.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/pid.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj: ../User/Src/position_control.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/position_control.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/position_control.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/position_control.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.obj: ../User/Src/uart_pi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/uart_pi.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/uart_pi.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/uart_pi.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.s
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.obj: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/flags.make
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.obj: ../User/Src/jy61p.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.obj"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.obj   -c /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/jy61p.c
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.i"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/jy61p.c > CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.i
+
+CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.s"
+	/opt/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/jy61p.c -o CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.s
+
 # Object files for target SUPERCAR_STM32F407ZGT6
 SUPERCAR_STM32F407ZGT6_OBJECTS = \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj" \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj" \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj" \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj" \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.obj" \
 "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.obj" \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj" \
 "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.obj" \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj" \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj" \
 "CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj" \
-"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj"
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.obj" \
+"CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.obj"
 
 # External object files for target SUPERCAR_STM32F407ZGT6
 SUPERCAR_STM32F407ZGT6_EXTERNAL_OBJECTS = \
 "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj" \
+"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj" \
 "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj" \
 "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj" \
 "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj" \
 "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj" \
 "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj" \
+"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj" \
+"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj" \
+"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj" \
 "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj" \
 "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj" \
+"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj" \
+"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj" \
 "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/gpio.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/can.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/tim.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/usart.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_it.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_hal_msp.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/sysmem.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/syscalls.c.obj" \
-"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/startup_stm32f407xx.s.obj"
+"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj" \
+"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj" \
+"/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj"
 
-SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj
-SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj
-SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj
-SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj
-SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.obj
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.obj
-SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.obj
-SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj
-SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj
-SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.obj
+SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
+SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
+SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/gpio.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/can.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/tim.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/usart.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_it.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_hal_msp.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/sysmem.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/syscalls.c.obj
-SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/startup_stm32f407xx.s.obj
+SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+SUPERCAR_STM32F407ZGT6.elf: cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make
 SUPERCAR_STM32F407ZGT6.elf: CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable SUPERCAR_STM32F407ZGT6.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking C executable SUPERCAR_STM32F407ZGT6.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/link.txt --verbose=$(VERBOSE)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating SUPERCAR_STM32F407ZGT6.hex"
-	arm-none-eabi-objcopy -O ihex /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/SUPERCAR_STM32F407ZGT6.elf SUPERCAR_STM32F407ZGT6.hex
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating SUPERCAR_STM32F407ZGT6.bin"
-	arm-none-eabi-objcopy -O binary /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/SUPERCAR_STM32F407ZGT6.elf SUPERCAR_STM32F407ZGT6.bin
 
 # Rule to build all files generated by this target.
 CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build: SUPERCAR_STM32F407ZGT6.elf

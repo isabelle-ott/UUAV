@@ -84,9 +84,9 @@ void MotorControl_Init(MotorControl *mc,
     else if (mc->pid_output_limit < 10.0f)
         mc->pid_output_limit = 10.0f; // 最小输出限幅10，防止电机堵转
 
-    // 3. 初始化控制频率（50~200Hz合理范围）
-    mc->control_freq = (control_freq < 50) ? 50 : (control_freq > 200) ? 200
-                                                                       : control_freq;
+    // 3. 初始化控制频率（50~1000Hz合理范围）
+    mc->control_freq = (control_freq < 50) ? 50 : (control_freq > 1000) ? 1000
+                                                                        : control_freq;
 
     // 4. 初始化4个电机的PID控制器
     for (MotorControlID id = MOTOR_LF; id < MOTOR_NUM; id++)
@@ -103,7 +103,7 @@ void MotorControl_SetTargetVel(MotorControl *mc, MotorControlID id, float target
     if (!MotorControl_CheckID(id) || mc == NULL)
         return;
 
-    // 设置PID目标速度（直接传递给对应电机的PID控制器）
+    // 设置PID目标速度
     PID_SetTarget(&mc->pid[id], target_vel);
 }
 

@@ -1,3 +1,14 @@
+/*
+主循环测试代码：
+    Motor_SetLeftFrontVel(&motor_, 50.0f); // 取绝对值=正转
+    HAL_Delay(300);
+    Motor_SetLeftFrontVel(&motor_, 30.0f); // 停止当前电机
+    HAL_Delay(300);
+    Motor_StopAll(&motor_);
+    HAL_Delay(500);
+
+*/
+
 #ifndef MOTOR_H
 #define MOTOR_H
 
@@ -7,28 +18,28 @@
 #include "stm32f4xx_hal.h"
 #include <math.h>
 
-// 电机ID枚举（与实例内的GPIO配置数组索引对应）
+// 电机ID枚举
 typedef enum
 {
-    LEFT_FRONT,  // 左前电机（索引0）
-    RIGHT_FRONT, // 右前电机（索引1）
-    RIGHT_REAR,  // 右后电机（索引2）
-    LEFT_REAR,   // 左后电机（索引3）
-    MOTOR_MAX    // 电机数量（用于数组边界检查）
+    LEFT_FRONT,  // 左前电机
+    RIGHT_FRONT, // 右前电机
+    RIGHT_REAR,  // 右后电机
+    LEFT_REAR,   // 左后电机
+    MOTOR_MAX    // 电机数量
 } MotorID;
 
-// 电机单路GPIO与PWM配置（每个电机的硬件参数）
+// 电机单路GPIO与PWM配置
 typedef struct
 {
-    GPIO_TypeDef *dir_port; // 方向控制GPIO端口（仅用于方向输出，不初始化）
+    GPIO_TypeDef *dir_port; // 方向控制GPIO端口
     uint16_t dir_pin;       // 方向控制GPIO引脚
-    uint32_t pwm_ch;        // PWM通道（如TIM_CHANNEL_1）
+    uint32_t pwm_ch;        // PWM通道
 } MotorSingleConfig;
 
-// 电机核心结构体（实例化对象，类似Encoder）
+// 电机核心结构体
 typedef struct
 {
-    TIM_HandleTypeDef *pwm_tim;                // PWM定时器句柄（如&htim5）
+    TIM_HandleTypeDef *pwm_tim;                // PWM定时器句柄
     uint32_t pwm_period;                       // PWM周期（ARR值，如1999）
     uint32_t max_pwm_value;                    // 最大PWM值（通常=period，占空比100%）
     uint32_t min_pwm_value;                    // 最小PWM值（通常=0，占空比0%）

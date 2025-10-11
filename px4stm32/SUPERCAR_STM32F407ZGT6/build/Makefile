@@ -136,6 +136,330 @@ STM32_Drivers/fast:
 	$(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build
 .PHONY : STM32_Drivers/fast
 
+Core/Src/can.obj: Core/Src/can.c.obj
+
+.PHONY : Core/Src/can.obj
+
+# target to build an object file
+Core/Src/can.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj
+.PHONY : Core/Src/can.c.obj
+
+Core/Src/can.i: Core/Src/can.c.i
+
+.PHONY : Core/Src/can.i
+
+# target to preprocess a source file
+Core/Src/can.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.i
+.PHONY : Core/Src/can.c.i
+
+Core/Src/can.s: Core/Src/can.c.s
+
+.PHONY : Core/Src/can.s
+
+# target to generate assembly for a file
+Core/Src/can.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.s
+.PHONY : Core/Src/can.c.s
+
+Core/Src/dma.obj: Core/Src/dma.c.obj
+
+.PHONY : Core/Src/dma.obj
+
+# target to build an object file
+Core/Src/dma.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.obj
+.PHONY : Core/Src/dma.c.obj
+
+Core/Src/dma.i: Core/Src/dma.c.i
+
+.PHONY : Core/Src/dma.i
+
+# target to preprocess a source file
+Core/Src/dma.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.i
+.PHONY : Core/Src/dma.c.i
+
+Core/Src/dma.s: Core/Src/dma.c.s
+
+.PHONY : Core/Src/dma.s
+
+# target to generate assembly for a file
+Core/Src/dma.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/dma.c.s
+.PHONY : Core/Src/dma.c.s
+
+Core/Src/gpio.obj: Core/Src/gpio.c.obj
+
+.PHONY : Core/Src/gpio.obj
+
+# target to build an object file
+Core/Src/gpio.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.obj
+.PHONY : Core/Src/gpio.c.obj
+
+Core/Src/gpio.i: Core/Src/gpio.c.i
+
+.PHONY : Core/Src/gpio.i
+
+# target to preprocess a source file
+Core/Src/gpio.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.i
+.PHONY : Core/Src/gpio.c.i
+
+Core/Src/gpio.s: Core/Src/gpio.c.s
+
+.PHONY : Core/Src/gpio.s
+
+# target to generate assembly for a file
+Core/Src/gpio.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/gpio.c.s
+.PHONY : Core/Src/gpio.c.s
+
+Core/Src/main.obj: Core/Src/main.c.obj
+
+.PHONY : Core/Src/main.obj
+
+# target to build an object file
+Core/Src/main.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.obj
+.PHONY : Core/Src/main.c.obj
+
+Core/Src/main.i: Core/Src/main.c.i
+
+.PHONY : Core/Src/main.i
+
+# target to preprocess a source file
+Core/Src/main.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.i
+.PHONY : Core/Src/main.c.i
+
+Core/Src/main.s: Core/Src/main.c.s
+
+.PHONY : Core/Src/main.s
+
+# target to generate assembly for a file
+Core/Src/main.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/main.c.s
+.PHONY : Core/Src/main.c.s
+
+Core/Src/stm32f4xx_hal_msp.obj: Core/Src/stm32f4xx_hal_msp.c.obj
+
+.PHONY : Core/Src/stm32f4xx_hal_msp.obj
+
+# target to build an object file
+Core/Src/stm32f4xx_hal_msp.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+.PHONY : Core/Src/stm32f4xx_hal_msp.c.obj
+
+Core/Src/stm32f4xx_hal_msp.i: Core/Src/stm32f4xx_hal_msp.c.i
+
+.PHONY : Core/Src/stm32f4xx_hal_msp.i
+
+# target to preprocess a source file
+Core/Src/stm32f4xx_hal_msp.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.i
+.PHONY : Core/Src/stm32f4xx_hal_msp.c.i
+
+Core/Src/stm32f4xx_hal_msp.s: Core/Src/stm32f4xx_hal_msp.c.s
+
+.PHONY : Core/Src/stm32f4xx_hal_msp.s
+
+# target to generate assembly for a file
+Core/Src/stm32f4xx_hal_msp.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_hal_msp.c.s
+.PHONY : Core/Src/stm32f4xx_hal_msp.c.s
+
+Core/Src/stm32f4xx_it.obj: Core/Src/stm32f4xx_it.c.obj
+
+.PHONY : Core/Src/stm32f4xx_it.obj
+
+# target to build an object file
+Core/Src/stm32f4xx_it.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.obj
+.PHONY : Core/Src/stm32f4xx_it.c.obj
+
+Core/Src/stm32f4xx_it.i: Core/Src/stm32f4xx_it.c.i
+
+.PHONY : Core/Src/stm32f4xx_it.i
+
+# target to preprocess a source file
+Core/Src/stm32f4xx_it.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.i
+.PHONY : Core/Src/stm32f4xx_it.c.i
+
+Core/Src/stm32f4xx_it.s: Core/Src/stm32f4xx_it.c.s
+
+.PHONY : Core/Src/stm32f4xx_it.s
+
+# target to generate assembly for a file
+Core/Src/stm32f4xx_it.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/stm32f4xx_it.c.s
+.PHONY : Core/Src/stm32f4xx_it.c.s
+
+Core/Src/syscalls.obj: Core/Src/syscalls.c.obj
+
+.PHONY : Core/Src/syscalls.obj
+
+# target to build an object file
+Core/Src/syscalls.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.obj
+.PHONY : Core/Src/syscalls.c.obj
+
+Core/Src/syscalls.i: Core/Src/syscalls.c.i
+
+.PHONY : Core/Src/syscalls.i
+
+# target to preprocess a source file
+Core/Src/syscalls.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.i
+.PHONY : Core/Src/syscalls.c.i
+
+Core/Src/syscalls.s: Core/Src/syscalls.c.s
+
+.PHONY : Core/Src/syscalls.s
+
+# target to generate assembly for a file
+Core/Src/syscalls.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/syscalls.c.s
+.PHONY : Core/Src/syscalls.c.s
+
+Core/Src/sysmem.obj: Core/Src/sysmem.c.obj
+
+.PHONY : Core/Src/sysmem.obj
+
+# target to build an object file
+Core/Src/sysmem.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.obj
+.PHONY : Core/Src/sysmem.c.obj
+
+Core/Src/sysmem.i: Core/Src/sysmem.c.i
+
+.PHONY : Core/Src/sysmem.i
+
+# target to preprocess a source file
+Core/Src/sysmem.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.i
+.PHONY : Core/Src/sysmem.c.i
+
+Core/Src/sysmem.s: Core/Src/sysmem.c.s
+
+.PHONY : Core/Src/sysmem.s
+
+# target to generate assembly for a file
+Core/Src/sysmem.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/sysmem.c.s
+.PHONY : Core/Src/sysmem.c.s
+
+Core/Src/tim.obj: Core/Src/tim.c.obj
+
+.PHONY : Core/Src/tim.obj
+
+# target to build an object file
+Core/Src/tim.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.obj
+.PHONY : Core/Src/tim.c.obj
+
+Core/Src/tim.i: Core/Src/tim.c.i
+
+.PHONY : Core/Src/tim.i
+
+# target to preprocess a source file
+Core/Src/tim.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.i
+.PHONY : Core/Src/tim.c.i
+
+Core/Src/tim.s: Core/Src/tim.c.s
+
+.PHONY : Core/Src/tim.s
+
+# target to generate assembly for a file
+Core/Src/tim.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/tim.c.s
+.PHONY : Core/Src/tim.c.s
+
+Core/Src/usart.obj: Core/Src/usart.c.obj
+
+.PHONY : Core/Src/usart.obj
+
+# target to build an object file
+Core/Src/usart.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj
+.PHONY : Core/Src/usart.c.obj
+
+Core/Src/usart.i: Core/Src/usart.c.i
+
+.PHONY : Core/Src/usart.i
+
+# target to preprocess a source file
+Core/Src/usart.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.i
+.PHONY : Core/Src/usart.c.i
+
+Core/Src/usart.s: Core/Src/usart.c.s
+
+.PHONY : Core/Src/usart.s
+
+# target to generate assembly for a file
+Core/Src/usart.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.s
+.PHONY : Core/Src/usart.c.s
+
+User/Src/arm.obj: User/Src/arm.c.obj
+
+.PHONY : User/Src/arm.obj
+
+# target to build an object file
+User/Src/arm.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.obj
+.PHONY : User/Src/arm.c.obj
+
+User/Src/arm.i: User/Src/arm.c.i
+
+.PHONY : User/Src/arm.i
+
+# target to preprocess a source file
+User/Src/arm.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.i
+.PHONY : User/Src/arm.c.i
+
+User/Src/arm.s: User/Src/arm.c.s
+
+.PHONY : User/Src/arm.s
+
+# target to generate assembly for a file
+User/Src/arm.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.s
+.PHONY : User/Src/arm.c.s
+
+User/Src/arm_drive.obj: User/Src/arm_drive.c.obj
+
+.PHONY : User/Src/arm_drive.obj
+
+# target to build an object file
+User/Src/arm_drive.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.obj
+.PHONY : User/Src/arm_drive.c.obj
+
+User/Src/arm_drive.i: User/Src/arm_drive.c.i
+
+.PHONY : User/Src/arm_drive.i
+
+# target to preprocess a source file
+User/Src/arm_drive.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.i
+.PHONY : User/Src/arm_drive.c.i
+
+User/Src/arm_drive.s: User/Src/arm_drive.c.s
+
+.PHONY : User/Src/arm_drive.s
+
+# target to generate assembly for a file
+User/Src/arm_drive.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.s
+.PHONY : User/Src/arm_drive.c.s
+
 User/Src/encoder.obj: User/Src/encoder.c.obj
 
 .PHONY : User/Src/encoder.obj
@@ -189,33 +513,6 @@ User/Src/encoder_odom.s: User/Src/encoder_odom.c.s
 User/Src/encoder_odom.c.s:
 	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.s
 .PHONY : User/Src/encoder_odom.c.s
-
-User/Src/imu.obj: User/Src/imu.c.obj
-
-.PHONY : User/Src/imu.obj
-
-# target to build an object file
-User/Src/imu.c.obj:
-	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.obj
-.PHONY : User/Src/imu.c.obj
-
-User/Src/imu.i: User/Src/imu.c.i
-
-.PHONY : User/Src/imu.i
-
-# target to preprocess a source file
-User/Src/imu.c.i:
-	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.i
-.PHONY : User/Src/imu.c.i
-
-User/Src/imu.s: User/Src/imu.c.s
-
-.PHONY : User/Src/imu.s
-
-# target to generate assembly for a file
-User/Src/imu.c.s:
-	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu.c.s
-.PHONY : User/Src/imu.c.s
 
 User/Src/imu_odom.obj: User/Src/imu_odom.c.obj
 
@@ -297,6 +594,33 @@ User/Src/it_cb.s: User/Src/it_cb.c.s
 User/Src/it_cb.c.s:
 	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.s
 .PHONY : User/Src/it_cb.c.s
+
+User/Src/jy61p.obj: User/Src/jy61p.c.obj
+
+.PHONY : User/Src/jy61p.obj
+
+# target to build an object file
+User/Src/jy61p.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.obj
+.PHONY : User/Src/jy61p.c.obj
+
+User/Src/jy61p.i: User/Src/jy61p.c.i
+
+.PHONY : User/Src/jy61p.i
+
+# target to preprocess a source file
+User/Src/jy61p.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.i
+.PHONY : User/Src/jy61p.c.i
+
+User/Src/jy61p.s: User/Src/jy61p.c.s
+
+.PHONY : User/Src/jy61p.s
+
+# target to generate assembly for a file
+User/Src/jy61p.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.s
+.PHONY : User/Src/jy61p.c.s
 
 User/Src/light.obj: User/Src/light.c.obj
 
@@ -460,6 +784,42 @@ User/Src/position_control.c.s:
 	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.s
 .PHONY : User/Src/position_control.c.s
 
+User/Src/uart_pi.obj: User/Src/uart_pi.c.obj
+
+.PHONY : User/Src/uart_pi.obj
+
+# target to build an object file
+User/Src/uart_pi.c.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.obj
+.PHONY : User/Src/uart_pi.c.obj
+
+User/Src/uart_pi.i: User/Src/uart_pi.c.i
+
+.PHONY : User/Src/uart_pi.i
+
+# target to preprocess a source file
+User/Src/uart_pi.c.i:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.i
+.PHONY : User/Src/uart_pi.c.i
+
+User/Src/uart_pi.s: User/Src/uart_pi.c.s
+
+.PHONY : User/Src/uart_pi.s
+
+# target to generate assembly for a file
+User/Src/uart_pi.c.s:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/uart_pi.c.s
+.PHONY : User/Src/uart_pi.c.s
+
+startup_stm32f407xx.obj: startup_stm32f407xx.s.obj
+
+.PHONY : startup_stm32f407xx.obj
+
+# target to build an object file
+startup_stm32f407xx.s.obj:
+	$(MAKE) -f CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/build.make CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/startup_stm32f407xx.s.obj
+.PHONY : startup_stm32f407xx.s.obj
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -470,15 +830,48 @@ help:
 	@echo "... edit_cache"
 	@echo "... SUPERCAR_STM32F407ZGT6"
 	@echo "... STM32_Drivers"
+	@echo "... Core/Src/can.obj"
+	@echo "... Core/Src/can.i"
+	@echo "... Core/Src/can.s"
+	@echo "... Core/Src/dma.obj"
+	@echo "... Core/Src/dma.i"
+	@echo "... Core/Src/dma.s"
+	@echo "... Core/Src/gpio.obj"
+	@echo "... Core/Src/gpio.i"
+	@echo "... Core/Src/gpio.s"
+	@echo "... Core/Src/main.obj"
+	@echo "... Core/Src/main.i"
+	@echo "... Core/Src/main.s"
+	@echo "... Core/Src/stm32f4xx_hal_msp.obj"
+	@echo "... Core/Src/stm32f4xx_hal_msp.i"
+	@echo "... Core/Src/stm32f4xx_hal_msp.s"
+	@echo "... Core/Src/stm32f4xx_it.obj"
+	@echo "... Core/Src/stm32f4xx_it.i"
+	@echo "... Core/Src/stm32f4xx_it.s"
+	@echo "... Core/Src/syscalls.obj"
+	@echo "... Core/Src/syscalls.i"
+	@echo "... Core/Src/syscalls.s"
+	@echo "... Core/Src/sysmem.obj"
+	@echo "... Core/Src/sysmem.i"
+	@echo "... Core/Src/sysmem.s"
+	@echo "... Core/Src/tim.obj"
+	@echo "... Core/Src/tim.i"
+	@echo "... Core/Src/tim.s"
+	@echo "... Core/Src/usart.obj"
+	@echo "... Core/Src/usart.i"
+	@echo "... Core/Src/usart.s"
+	@echo "... User/Src/arm.obj"
+	@echo "... User/Src/arm.i"
+	@echo "... User/Src/arm.s"
+	@echo "... User/Src/arm_drive.obj"
+	@echo "... User/Src/arm_drive.i"
+	@echo "... User/Src/arm_drive.s"
 	@echo "... User/Src/encoder.obj"
 	@echo "... User/Src/encoder.i"
 	@echo "... User/Src/encoder.s"
 	@echo "... User/Src/encoder_odom.obj"
 	@echo "... User/Src/encoder_odom.i"
 	@echo "... User/Src/encoder_odom.s"
-	@echo "... User/Src/imu.obj"
-	@echo "... User/Src/imu.i"
-	@echo "... User/Src/imu.s"
 	@echo "... User/Src/imu_odom.obj"
 	@echo "... User/Src/imu_odom.i"
 	@echo "... User/Src/imu_odom.s"
@@ -488,6 +881,9 @@ help:
 	@echo "... User/Src/it_cb.obj"
 	@echo "... User/Src/it_cb.i"
 	@echo "... User/Src/it_cb.s"
+	@echo "... User/Src/jy61p.obj"
+	@echo "... User/Src/jy61p.i"
+	@echo "... User/Src/jy61p.s"
 	@echo "... User/Src/light.obj"
 	@echo "... User/Src/light.i"
 	@echo "... User/Src/light.s"
@@ -506,6 +902,10 @@ help:
 	@echo "... User/Src/position_control.obj"
 	@echo "... User/Src/position_control.i"
 	@echo "... User/Src/position_control.s"
+	@echo "... User/Src/uart_pi.obj"
+	@echo "... User/Src/uart_pi.i"
+	@echo "... User/Src/uart_pi.s"
+	@echo "... startup_stm32f407xx.obj"
 .PHONY : help
 
 

@@ -1,33 +1,38 @@
 #pragma once
 
-#include "encoder.h" // 包含Encoder结构体定义
+#include "encoder.h"
 #include "encoder_odom.h"
-#include "imu.h"
+#include "jy61p.h"
 #include "imu_odom.h"
 #include "odom.h"
-#include "motor.h" // 包含MotorController、电机接口定义
+
+#include "motor.h"
 #include "pid.h"
 #include "motor_control.h"
 #include "position_control.h"
+
 #include "it_cb.h"
 #include "light.h"
-#include "uart_pi.h" // 包含UartPi头文件
+#include "uart_pi.h"
 
-// 1. 原有全局实例声明
 extern Encoder encoder_;
-extern Motor motor_;
+extern Motor motor_; // 不带pid
 extern EncoderOdom encoder_odom_;
 
-extern PID_Controller lf_pid; // 左前电机速度PID
-extern PID_Controller rf_pid; // 右前电机速度PID
-extern PID_Controller rr_pid; // 右后电机速度PID
-extern PID_Controller lr_pid; // 左后电机速度PID
-extern PID_Controller base_position_pid;
+extern PID_Controller lf_pid;            // 左前电机速度PID
+extern PID_Controller rf_pid;            // 右前电机速度PID
+extern PID_Controller rr_pid;            // 右后电机速度PID
+extern PID_Controller lr_pid;            // 左后电机速度PID
+extern PID_Controller base_position_pid; // 底盘位置PID
 
-extern MotorControl motor_control_;
-extern PositionControl position_control_;
+extern MotorControl motor_control_;       // 带pid
+extern PositionControl position_control_; // 带pid
 
 extern UartPi uart_pi_;
+
+extern JY61P_Acc g_jy61p_acc;
+extern JY61P_Gyro g_jy61p_gyro;
+extern JY61P_Angle g_jy61p_angle;
 
 // 3. 初始化与测试函数声明
 void All_Init(void);

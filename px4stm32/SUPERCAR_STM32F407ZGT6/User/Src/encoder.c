@@ -35,13 +35,13 @@ void Encoder_Init(Encoder *encoder,
     if (encoder == NULL || htim_lf == NULL || htim_rf == NULL || htim_rr == NULL || htim_lr == NULL)
         return;
 
-    // 1. 绑定硬件定时器句柄（外部传入，支持灵活配置）
+    // 1. 绑定硬件定时器句柄
     encoder->htim_left_front = htim_lf;
     encoder->htim_right_front = htim_rf;
     encoder->htim_right_rear = htim_rr;
     encoder->htim_left_rear = htim_lr;
 
-    // 2. 初始化数据成员（避免随机值）
+    // 2. 初始化数据成员
     encoder->last_lf_diff = 0;
     encoder->last_rf_diff = 0;
     encoder->last_rr_diff = 0;
@@ -55,7 +55,7 @@ void Encoder_Init(Encoder *encoder,
     encoder->current_rr_vel = 0.0f;
     encoder->current_lr_vel = 0.0f;
 
-    // 3. 初始化计数器（设为中间值，防溢出）
+    // 3. 初始化计数器
     Encoder_ResetAllCounts(encoder);
 }
 
@@ -65,23 +65,23 @@ void Encoder_Sample(Encoder *encoder)
     if (encoder == NULL)
         return;
 
-    // 1. 更新采样时间（记录上次+当前时刻）
+    // 1. 更新采样时间
     encoder->last_sample_time = encoder->current_sample_time;
     encoder->current_sample_time = HAL_GetTick();
 
-    // 2. 计算时间差（处理uint32_t回卷，避免除零错误）
+    // 2. 计算时间差
     uint32_t time_diff_ms = encoder->current_sample_time - encoder->last_sample_time;
     if (time_diff_ms == 0)
-        return;                                        // 时间差为0，不更新速度（避免除零）
-    float time_diff_s = (float)time_diff_ms / 1000.0f; // 转换为秒
+        return;
+    float time_diff_s = (float)time_diff_ms / 1000.0f;
 
-    // 3. 读取当前各轮计数差值（带符号，区分正反转）
+    // 3. 读取当前各轮计数差值
     int32_t curr_lf_diff = Encoder_GetTimerDiff(encoder->htim_left_front);
     int32_t curr_rf_diff = Encoder_GetTimerDiff(encoder->htim_right_front);
     int32_t curr_rr_diff = Encoder_GetTimerDiff(encoder->htim_right_rear);
     int32_t curr_lr_diff = Encoder_GetTimerDiff(encoder->htim_left_rear);
 
-    // 4. 保存本次差值（供外部计算位移）
+    // 4. 保存本次差值
     encoder->last_lf_diff = curr_lf_diff;
     encoder->last_rf_diff = curr_rf_diff;
     encoder->last_rr_diff = curr_rr_diff;
@@ -94,7 +94,7 @@ void Encoder_Sample(Encoder *encoder)
     encoder->current_rr_vel = curr_rr_diff / pulses_per_circle / time_diff_s;
     encoder->current_lr_vel = curr_lr_diff / pulses_per_circle / time_diff_s;
 
-    // 6. 重置计数器（采样后立即重置，彻底避免16位计数器溢出）
+    // 6. 重置计数器
     Encoder_ResetAllCounts(encoder);
 }
 
@@ -164,7 +164,7 @@ void Encoder_ResetLeftFrontCount(Encoder *encoder)
     if (encoder == NULL || encoder->htim_left_front == NULL)
         return;
     __HAL_TIM_SET_COUNTER(encoder->htim_left_front, ENCODER_INIT_VAL);
-    encoder->last_lf_diff = 0; // 重置差值记录，避免旧值干扰
+    // encoder->last_lf_diff = 0;
 }
 
 void Encoder_ResetRightFrontCount(Encoder *encoder)
@@ -172,7 +172,7 @@ void Encoder_ResetRightFrontCount(Encoder *encoder)
     if (encoder == NULL || encoder->htim_right_front == NULL)
         return;
     __HAL_TIM_SET_COUNTER(encoder->htim_right_front, ENCODER_INIT_VAL);
-    encoder->last_rf_diff = 0;
+    // encoder->last_rf_diff = 0;
 }
 
 void Encoder_ResetRightRearCount(Encoder *encoder)
@@ -180,7 +180,7 @@ void Encoder_ResetRightRearCount(Encoder *encoder)
     if (encoder == NULL || encoder->htim_right_rear == NULL)
         return;
     __HAL_TIM_SET_COUNTER(encoder->htim_right_rear, ENCODER_INIT_VAL);
-    encoder->last_rr_diff = 0;
+    // encoder->last_rr_diff = 0;
 }
 
 void Encoder_ResetLeftRearCount(Encoder *encoder)
@@ -188,7 +188,7 @@ void Encoder_ResetLeftRearCount(Encoder *encoder)
     if (encoder == NULL || encoder->htim_left_rear == NULL)
         return;
     __HAL_TIM_SET_COUNTER(encoder->htim_left_rear, ENCODER_INIT_VAL);
-    encoder->last_lr_diff = 0;
+    // encoder->last_lr_diff = 0;
 }
 
 void Encoder_ResetAllCounts(Encoder *encoder)

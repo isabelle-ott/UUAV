@@ -20,25 +20,25 @@ void Motor_Init(Motor *motor,
                 const MotorSingleConfig *rr_config,
                 const MotorSingleConfig *lr_config)
 {
-    // 入参合法性检查（避免空指针访问）
+    // 入参合法性检查
     if (motor == NULL || pwm_tim == NULL ||
         lf_config == NULL || rf_config == NULL ||
         rr_config == NULL || lr_config == NULL)
         return;
 
-    // 1. 初始化定时器与PWM参数（与CubeMX配置一致）
+    // 1. 初始化定时器与PWM参数
     motor->pwm_tim = pwm_tim;
     motor->pwm_period = pwm_period;
     motor->max_pwm_value = pwm_period; // 最大PWM=周期（占空比100%）
     motor->min_pwm_value = 0;          // 最小PWM=0（占空比0%）
 
-    // 2. 绑定4个电机的硬件配置（仅存储端口/引脚/通道，不初始化）
+    // 2. 绑定4个电机的硬件配置
     motor->motor_config[LEFT_FRONT] = *lf_config;
     motor->motor_config[RIGHT_FRONT] = *rf_config;
     motor->motor_config[RIGHT_REAR] = *rr_config;
     motor->motor_config[LEFT_REAR] = *lr_config;
 
-    // 3. 初始状态：停止所有电机（PWM设为0，方向设为默认）
+    // 3. 初始状态：停止所有电机
     Motor_StopAll(motor);
 }
 
@@ -47,7 +47,7 @@ void Motor_StartPWM(Motor *motor)
     if (motor == NULL || motor->pwm_tim == NULL)
         return;
 
-    // 启动PWM定时器的所有通道（根据电机配置，避免重复启动）
+    // 启动PWM定时器的所有通道
     uint8_t ch_flag[4] = {0};
     for (MotorID id = LEFT_FRONT; id < MOTOR_MAX; id++)
     {
@@ -87,10 +87,10 @@ void Motor_SetVelocity(Motor *motor, MotorID id, float velocity)
     if (velocity < -100.0f)
         velocity = -100.0f;
 
-    // 2. 获取当前电机的配置（端口、引脚、PWM通道）
+    // 2. 获取当前电机的配置
     MotorSingleConfig *config = &motor->motor_config[id];
 
-    // 3. 控制电机方向（依赖MX_GPIO_Init()配置的输出模式）
+    // 3. 控制电机方向
     GPIO_PinState dir_state = (velocity >= 0.0f) ? GPIO_PIN_RESET : GPIO_PIN_SET;
     HAL_GPIO_WritePin(config->dir_port, config->dir_pin, dir_state);
 
@@ -124,7 +124,7 @@ void Motor_StopAll(Motor *motor)
     if (motor == NULL)
         return;
 
-    // 停止所有电机（PWM设为0，方向保持默认）
+    // 停止所有电机
     Motor_SetVelocity(motor, LEFT_FRONT, 0.0f);
     Motor_SetVelocity(motor, RIGHT_FRONT, 0.0f);
     Motor_SetVelocity(motor, RIGHT_REAR, 0.0f);

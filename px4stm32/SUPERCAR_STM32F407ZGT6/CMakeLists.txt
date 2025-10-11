@@ -1,87 +1,86 @@
 cmake_minimum_required(VERSION 3.16)
 
-# -------------------------- 基础配置 --------------------------
-# 项目名称
-set(CMAKE_PROJECT_NAME SUPERCAR_STM32F407ZGT6)
-project(${CMAKE_PROJECT_NAME})
+#
+# This file is generated only once,
+# and is not re-generated if converter is called multiple times.
+#
+# User is free to modify the file as much as necessary
+#
 
-# 编译标准（C11，兼容HAL库）
+# Setup compiler settings
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS ON)
 
-# 构建类型（默认Debug，支持Release）
+
+# Define the build type
 if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "Choose build type: Debug/Release" FORCE)
+    set(CMAKE_BUILD_TYPE "Debug")
 endif()
-message("Build type: ${CMAKE_BUILD_TYPE}")
 
-# 启用汇编和C语言支持（STM32启动文件为汇编）
-enable_language(C ASM)
+# Set the project name
+set(CMAKE_PROJECT_NAME SUPERCAR_STM32F407ZGT6)
 
-# 生成compile_commands.json，方便IDE索引（如VSCode、Clangd）
+# Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
-# -------------------------- 工具链配置（若未单独配置需添加） --------------------------
-# 若使用ARM交叉编译工具链，需指定工具链路径（根据实际安装路径修改）
-if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
-    set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/cmake/gcc-arm-none-eabi.cmake" CACHE PATH "Toolchain file")
-endif()
+# Core project settings
+project(${CMAKE_PROJECT_NAME})
+message("Build type: " ${CMAKE_BUILD_TYPE})
 
-# -------------------------- 生成可执行文件 --------------------------
-# 创建ELF可执行文件（STM32的目标文件）
-add_executable(${CMAKE_PROJECT_NAME} "")
+# Enable CMake support for ASM and C languages
+enable_language(C ASM)
+enable_language(CXX)  # 启用 C++ 支持
 
-# -------------------------- 添加子模块（STM32CubeMX生成的驱动） --------------------------
+# Create an executable object type
+add_executable(${CMAKE_PROJECT_NAME})
+
+# Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
 
-# -------------------------- 添加用户自定义源文件（关键：User/Src下的所有文件） --------------------------
+# Link directories setup
+target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
+    # Add user defined library search paths
+)
+
+# Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    # User/Src下的所有用户文件，按实际文件补充
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/init.c          # 包含All_Init函数
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/motor.c         # 电机驱动实现
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/motor_control.c # 电机控制逻辑
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/pid.c           # PID算法实现
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/encoder.c       # 编码器实现
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/encoder_odom.c  # 编码器里程计
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/imu.c           # IMU驱动
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/imu_odom.c      # IMU里程计
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/odom.c          # 里程计融合
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/position_control.c # 位置控制
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/light.c         # 灯光控制
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/it_cb.c         # 中断回调
+    # Add user sources here
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/arm_drive.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/arm.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/encoder_odom.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/encoder.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/imu_odom.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/init.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/it_cb.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/light.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/motor_control.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/motor.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/odom.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/pid.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/position_control.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/uart_pi.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/jy61p.c
+
 )
 
-# -------------------------- 用户头文件路径（User/Inc） --------------------------
+# Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Inc  # 让编译器找到User/Inc下的.h文件
+    # Add user defined include paths
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Inc
 )
 
-# -------------------------- 链接配置 --------------------------
-# 移除无用的ob库依赖（避免C++编译冲突，若用C则可选）
+# Add project symbols (macros)
+target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
+    # Add user defined symbols
+)
+
+# Remove wrong libob.a library dependency when using cpp files
 list(REMOVE_ITEM CMAKE_C_IMPLICIT_LINK_LIBRARIES ob)
 
-# 链接核心库（stm32cubemx包含HAL库和基础配置）
+# Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
-    PRIVATE
-    stm32cubemx  # 来自cmake/stm32cubemx的接口库
-    -lm
-)
+    stm32cubemx
 
-# -------------------------- 生成HEX和BIN文件（下载到STM32用） --------------------------
-# 从ELF生成HEX文件
-add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.hex
-    COMMENT "Generating ${CMAKE_PROJECT_NAME}.hex"
-)
-
-# 从ELF生成BIN文件
-add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.bin
-    COMMENT "Generating ${CMAKE_PROJECT_NAME}.bin"
-)
-
-# -------------------------- 清理目标（可选） --------------------------
-set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
-    ADDITIONAL_CLEAN_FILES "${CMAKE_PROJECT_NAME}.hex;${CMAKE_PROJECT_NAME}.bin;${CMAKE_PROJECT_NAME}.map"
+    # Add user defined libraries
 )

@@ -4,6 +4,7 @@ MotorControl_SetTargetVel(&motor_control_, MOTOR_LF, 2.0f);
 MotorControl_SetTargetVel(&motor_control_, MOTOR_RF, 2.0f);
 MotorControl_SetTargetVel(&motor_control_, MOTOR_RR, 2.0f);
 MotorControl_SetTargetVel(&motor_control_, MOTOR_LR, 2.0f);
+MotorControl_Loop(&motor_control_);
 
 // 运行5秒后停止
 HAL_Delay(5000);
@@ -55,7 +56,7 @@ typedef struct
  * @param pid_kp/ki/kd：PID参数
  * @param pid_integral_limit：PID积分限幅
  * @param pid_output_limit：PID输出限幅（建议±100，对应PWM占空比）
- * @param control_freq：控制频率（Hz，建议50~200）
+ * @param control_freq：控制频率（Hz，建议50~1000）
  */
 void MotorControl_Init(MotorControl *mc,
                        Motor *motor,

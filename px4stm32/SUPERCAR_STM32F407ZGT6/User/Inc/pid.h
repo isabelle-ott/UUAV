@@ -11,15 +11,15 @@ typedef enum
     PID_VELOCITY = 1  // 增量式PID（适用于速度控制，如轮子速度）
 } PID_Mode;
 
-// PID控制器结构体（支持多实例，如lf_pid、lr_pid等）
+// PID控制器结构体
 typedef struct
 {
     PID_Mode mode;        // PID模式（位置/增量）
     float kp;             // 比例系数
     float ki;             // 积分系数
     float kd;             // 微分系数
-    float integral_limit; // 积分限幅（防止积分饱和）
-    float output_limit;   // 输出限幅（限制控制量范围）
+    float integral_limit; // 积分限幅
+    float output_limit;   // 输出限幅
 
     // 位置式PID变量
     float target;        // 目标值

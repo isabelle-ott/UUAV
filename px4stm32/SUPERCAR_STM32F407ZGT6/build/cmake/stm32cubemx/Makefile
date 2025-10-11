@@ -125,195 +125,6 @@ STM32_Drivers/fast:
 	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build
 .PHONY : STM32_Drivers/fast
 
-__/__/Core/Src/can.obj: __/__/Core/Src/can.c.obj
-
-.PHONY : __/__/Core/Src/can.obj
-
-# target to build an object file
-__/__/Core/Src/can.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/can.c.obj
-.PHONY : __/__/Core/Src/can.c.obj
-
-__/__/Core/Src/can.i: __/__/Core/Src/can.c.i
-
-.PHONY : __/__/Core/Src/can.i
-
-# target to preprocess a source file
-__/__/Core/Src/can.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/can.c.i
-.PHONY : __/__/Core/Src/can.c.i
-
-__/__/Core/Src/can.s: __/__/Core/Src/can.c.s
-
-.PHONY : __/__/Core/Src/can.s
-
-# target to generate assembly for a file
-__/__/Core/Src/can.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/can.c.s
-.PHONY : __/__/Core/Src/can.c.s
-
-__/__/Core/Src/gpio.obj: __/__/Core/Src/gpio.c.obj
-
-.PHONY : __/__/Core/Src/gpio.obj
-
-# target to build an object file
-__/__/Core/Src/gpio.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/gpio.c.obj
-.PHONY : __/__/Core/Src/gpio.c.obj
-
-__/__/Core/Src/gpio.i: __/__/Core/Src/gpio.c.i
-
-.PHONY : __/__/Core/Src/gpio.i
-
-# target to preprocess a source file
-__/__/Core/Src/gpio.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/gpio.c.i
-.PHONY : __/__/Core/Src/gpio.c.i
-
-__/__/Core/Src/gpio.s: __/__/Core/Src/gpio.c.s
-
-.PHONY : __/__/Core/Src/gpio.s
-
-# target to generate assembly for a file
-__/__/Core/Src/gpio.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/gpio.c.s
-.PHONY : __/__/Core/Src/gpio.c.s
-
-__/__/Core/Src/main.obj: __/__/Core/Src/main.c.obj
-
-.PHONY : __/__/Core/Src/main.obj
-
-# target to build an object file
-__/__/Core/Src/main.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.obj
-.PHONY : __/__/Core/Src/main.c.obj
-
-__/__/Core/Src/main.i: __/__/Core/Src/main.c.i
-
-.PHONY : __/__/Core/Src/main.i
-
-# target to preprocess a source file
-__/__/Core/Src/main.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.i
-.PHONY : __/__/Core/Src/main.c.i
-
-__/__/Core/Src/main.s: __/__/Core/Src/main.c.s
-
-.PHONY : __/__/Core/Src/main.s
-
-# target to generate assembly for a file
-__/__/Core/Src/main.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/main.c.s
-.PHONY : __/__/Core/Src/main.c.s
-
-__/__/Core/Src/stm32f4xx_hal_msp.obj: __/__/Core/Src/stm32f4xx_hal_msp.c.obj
-
-.PHONY : __/__/Core/Src/stm32f4xx_hal_msp.obj
-
-# target to build an object file
-__/__/Core/Src/stm32f4xx_hal_msp.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_hal_msp.c.obj
-.PHONY : __/__/Core/Src/stm32f4xx_hal_msp.c.obj
-
-__/__/Core/Src/stm32f4xx_hal_msp.i: __/__/Core/Src/stm32f4xx_hal_msp.c.i
-
-.PHONY : __/__/Core/Src/stm32f4xx_hal_msp.i
-
-# target to preprocess a source file
-__/__/Core/Src/stm32f4xx_hal_msp.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_hal_msp.c.i
-.PHONY : __/__/Core/Src/stm32f4xx_hal_msp.c.i
-
-__/__/Core/Src/stm32f4xx_hal_msp.s: __/__/Core/Src/stm32f4xx_hal_msp.c.s
-
-.PHONY : __/__/Core/Src/stm32f4xx_hal_msp.s
-
-# target to generate assembly for a file
-__/__/Core/Src/stm32f4xx_hal_msp.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_hal_msp.c.s
-.PHONY : __/__/Core/Src/stm32f4xx_hal_msp.c.s
-
-__/__/Core/Src/stm32f4xx_it.obj: __/__/Core/Src/stm32f4xx_it.c.obj
-
-.PHONY : __/__/Core/Src/stm32f4xx_it.obj
-
-# target to build an object file
-__/__/Core/Src/stm32f4xx_it.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_it.c.obj
-.PHONY : __/__/Core/Src/stm32f4xx_it.c.obj
-
-__/__/Core/Src/stm32f4xx_it.i: __/__/Core/Src/stm32f4xx_it.c.i
-
-.PHONY : __/__/Core/Src/stm32f4xx_it.i
-
-# target to preprocess a source file
-__/__/Core/Src/stm32f4xx_it.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_it.c.i
-.PHONY : __/__/Core/Src/stm32f4xx_it.c.i
-
-__/__/Core/Src/stm32f4xx_it.s: __/__/Core/Src/stm32f4xx_it.c.s
-
-.PHONY : __/__/Core/Src/stm32f4xx_it.s
-
-# target to generate assembly for a file
-__/__/Core/Src/stm32f4xx_it.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/stm32f4xx_it.c.s
-.PHONY : __/__/Core/Src/stm32f4xx_it.c.s
-
-__/__/Core/Src/syscalls.obj: __/__/Core/Src/syscalls.c.obj
-
-.PHONY : __/__/Core/Src/syscalls.obj
-
-# target to build an object file
-__/__/Core/Src/syscalls.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/syscalls.c.obj
-.PHONY : __/__/Core/Src/syscalls.c.obj
-
-__/__/Core/Src/syscalls.i: __/__/Core/Src/syscalls.c.i
-
-.PHONY : __/__/Core/Src/syscalls.i
-
-# target to preprocess a source file
-__/__/Core/Src/syscalls.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/syscalls.c.i
-.PHONY : __/__/Core/Src/syscalls.c.i
-
-__/__/Core/Src/syscalls.s: __/__/Core/Src/syscalls.c.s
-
-.PHONY : __/__/Core/Src/syscalls.s
-
-# target to generate assembly for a file
-__/__/Core/Src/syscalls.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/syscalls.c.s
-.PHONY : __/__/Core/Src/syscalls.c.s
-
-__/__/Core/Src/sysmem.obj: __/__/Core/Src/sysmem.c.obj
-
-.PHONY : __/__/Core/Src/sysmem.obj
-
-# target to build an object file
-__/__/Core/Src/sysmem.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/sysmem.c.obj
-.PHONY : __/__/Core/Src/sysmem.c.obj
-
-__/__/Core/Src/sysmem.i: __/__/Core/Src/sysmem.c.i
-
-.PHONY : __/__/Core/Src/sysmem.i
-
-# target to preprocess a source file
-__/__/Core/Src/sysmem.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/sysmem.c.i
-.PHONY : __/__/Core/Src/sysmem.c.i
-
-__/__/Core/Src/sysmem.s: __/__/Core/Src/sysmem.c.s
-
-.PHONY : __/__/Core/Src/sysmem.s
-
-# target to generate assembly for a file
-__/__/Core/Src/sysmem.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/sysmem.c.s
-.PHONY : __/__/Core/Src/sysmem.c.s
-
 __/__/Core/Src/system_stm32f4xx.obj: __/__/Core/Src/system_stm32f4xx.c.obj
 
 .PHONY : __/__/Core/Src/system_stm32f4xx.obj
@@ -340,60 +151,6 @@ __/__/Core/Src/system_stm32f4xx.s: __/__/Core/Src/system_stm32f4xx.c.s
 __/__/Core/Src/system_stm32f4xx.c.s:
 	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.s
 .PHONY : __/__/Core/Src/system_stm32f4xx.c.s
-
-__/__/Core/Src/tim.obj: __/__/Core/Src/tim.c.obj
-
-.PHONY : __/__/Core/Src/tim.obj
-
-# target to build an object file
-__/__/Core/Src/tim.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/tim.c.obj
-.PHONY : __/__/Core/Src/tim.c.obj
-
-__/__/Core/Src/tim.i: __/__/Core/Src/tim.c.i
-
-.PHONY : __/__/Core/Src/tim.i
-
-# target to preprocess a source file
-__/__/Core/Src/tim.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/tim.c.i
-.PHONY : __/__/Core/Src/tim.c.i
-
-__/__/Core/Src/tim.s: __/__/Core/Src/tim.c.s
-
-.PHONY : __/__/Core/Src/tim.s
-
-# target to generate assembly for a file
-__/__/Core/Src/tim.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/tim.c.s
-.PHONY : __/__/Core/Src/tim.c.s
-
-__/__/Core/Src/usart.obj: __/__/Core/Src/usart.c.obj
-
-.PHONY : __/__/Core/Src/usart.obj
-
-# target to build an object file
-__/__/Core/Src/usart.c.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/usart.c.obj
-.PHONY : __/__/Core/Src/usart.c.obj
-
-__/__/Core/Src/usart.i: __/__/Core/Src/usart.c.i
-
-.PHONY : __/__/Core/Src/usart.i
-
-# target to preprocess a source file
-__/__/Core/Src/usart.c.i:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/usart.c.i
-.PHONY : __/__/Core/Src/usart.c.i
-
-__/__/Core/Src/usart.s: __/__/Core/Src/usart.c.s
-
-.PHONY : __/__/Core/Src/usart.s
-
-# target to generate assembly for a file
-__/__/Core/Src/usart.c.s:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/usart.c.s
-.PHONY : __/__/Core/Src/usart.c.s
 
 __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj: __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 
@@ -854,15 +611,6 @@ __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s:
 	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
 .PHONY : __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
 
-__/__/startup_stm32f407xx.obj: __/__/startup_stm32f407xx.s.obj
-
-.PHONY : __/__/startup_stm32f407xx.obj
-
-# target to build an object file
-__/__/startup_stm32f407xx.s.obj:
-	cd /home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build && $(MAKE) -f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/build.make cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/startup_stm32f407xx.s.obj
-.PHONY : __/__/startup_stm32f407xx.s.obj
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -872,36 +620,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... STM32_Drivers"
-	@echo "... __/__/Core/Src/can.obj"
-	@echo "... __/__/Core/Src/can.i"
-	@echo "... __/__/Core/Src/can.s"
-	@echo "... __/__/Core/Src/gpio.obj"
-	@echo "... __/__/Core/Src/gpio.i"
-	@echo "... __/__/Core/Src/gpio.s"
-	@echo "... __/__/Core/Src/main.obj"
-	@echo "... __/__/Core/Src/main.i"
-	@echo "... __/__/Core/Src/main.s"
-	@echo "... __/__/Core/Src/stm32f4xx_hal_msp.obj"
-	@echo "... __/__/Core/Src/stm32f4xx_hal_msp.i"
-	@echo "... __/__/Core/Src/stm32f4xx_hal_msp.s"
-	@echo "... __/__/Core/Src/stm32f4xx_it.obj"
-	@echo "... __/__/Core/Src/stm32f4xx_it.i"
-	@echo "... __/__/Core/Src/stm32f4xx_it.s"
-	@echo "... __/__/Core/Src/syscalls.obj"
-	@echo "... __/__/Core/Src/syscalls.i"
-	@echo "... __/__/Core/Src/syscalls.s"
-	@echo "... __/__/Core/Src/sysmem.obj"
-	@echo "... __/__/Core/Src/sysmem.i"
-	@echo "... __/__/Core/Src/sysmem.s"
 	@echo "... __/__/Core/Src/system_stm32f4xx.obj"
 	@echo "... __/__/Core/Src/system_stm32f4xx.i"
 	@echo "... __/__/Core/Src/system_stm32f4xx.s"
-	@echo "... __/__/Core/Src/tim.obj"
-	@echo "... __/__/Core/Src/tim.i"
-	@echo "... __/__/Core/Src/tim.s"
-	@echo "... __/__/Core/Src/usart.obj"
-	@echo "... __/__/Core/Src/usart.i"
-	@echo "... __/__/Core/Src/usart.s"
 	@echo "... __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj"
 	@echo "... __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.i"
 	@echo "... __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.s"
@@ -953,7 +674,6 @@ help:
 	@echo "... __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.obj"
 	@echo "... __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.i"
 	@echo "... __/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.s"
-	@echo "... __/__/startup_stm32f407xx.obj"
 .PHONY : help
 
 

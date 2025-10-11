@@ -8,7 +8,7 @@
 #endif
 
 /**
- * @brief 计算单个轮子的移动距离（带方向）
+ * @brief 计算单个轮子的移动距离
  * @param odom：EncoderOdom实例指针
  * @param diff：编码器差分（正=轮子前进方向，负=后退）
  * @return 轮子移动距离（米，正=前进，负=后退）

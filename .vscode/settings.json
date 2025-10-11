@@ -1,3 +1,19 @@
 {
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "position_control.h": "c",
+        "usart.h": "c",
+        "stdint.h": "c",
+        "stdio.h": "c",
+        "string.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "ranges": "c",
+        "motor_control.h": "c",
+        "encoder.h": "c",
+        "uart_pi.h": "c",
+        "init.h": "c",
+        "math.h": "c"
+    }
 }
