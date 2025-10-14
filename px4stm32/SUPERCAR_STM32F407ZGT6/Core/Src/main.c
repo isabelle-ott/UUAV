@@ -54,55 +54,25 @@
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 extern Encoder encoder_;
-extern Motor motor_;
-extern EncoderOdom encoder_odom_;
 
 extern JY61P_Acc g_jy61p_acc;
 extern JY61P_Gyro g_jy61p_gyro;
 extern JY61P_Angle g_jy61p_angle;
 extern JY61P_Tim g_jy61p_Tim;
-extern PID_Controller lf_pid;
-extern PID_Controller rf_pid;
-extern PID_Controller rr_pid;
-extern PID_Controller lr_pid;
-
+extern PID_Struct motor1_PID;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-void pid_velocity_test(PID_Controller *pid, float target_speed, uint32_t test_time_ms)
-{
-  if (pid == NULL || test_time_ms == 0)
-    return;
-
-  uint32_t start_time = HAL_GetTick();
-
-  while (HAL_GetTick() - start_time < test_time_ms)
-  {
-    // 1. 假设从编码器获取速度反馈（此处用模拟反馈，实际需替换为真实编码器速度）
-    float feedback_speed = 0.8f * pid->target + 0.2f * sinf(HAL_GetTick() / 1000.0f); // 模拟扰动
-
-    // 2. 设置PID目标值与反馈值
-    PID_SetTarget(pid, target_speed);
-    PID_SetFeedback(pid, feedback_speed);
-
-    // 3. PID计算
-    float output = PID_Calculate(pid);
-
-    HAL_Delay(50); // 50ms周期计算
-  }
-
-  // 测试结束，重置PID
-  PID_Reset(pid);
-}
+float output = 0;
+float target = 0.5;
 
 /* USER CODE END 0 */
 
 /**
- * @brief  The application entry point.
- * @retval int
- */
+  * @brief  The application entry point.
+  * @retval int
+  */
 int main(void)
 {
 
@@ -144,46 +114,66 @@ int main(void)
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   All_Init();
-  int test = 50;
+  Motor_StartPWM();
+  int arr = 0;
+  float cnt = HAL_GetTick();
+  float last_cnt = 0.0f;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    while (test != 0)
+    cnt = HAL_GetTick();
+    switch (arr)
     {
-      test--;
+    case 0:
+      target = 0.5;
+      if (cnt - last_cnt > 1500)
+      {
+        arr = 1;
+        last_cnt = cnt;
+      }
+      break;
+    case 1:
+      target = -0.5;
+      if (cnt - last_cnt > 1500)
+      {
+        arr = 0;
+        last_cnt = cnt;
+      }
+      break;
     }
-
-    test = 50;
-    pid_velocity_test(&base_position_pid, 50, 50000);
-    // Motor_SetLeftFrontVel(&motor_, test); // 取绝对值=正转
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    // motor1_control(target);
+    // motor2_control(target);
+    // motor3_control(target);
+    // motor4_control(target);
+    Set_Chassis_Vel(target, 0, 0);
   }
   /* USER CODE END 3 */
 }
 
 /**
- * @brief System Clock Configuration
- * @retval None
- */
+  * @brief System Clock Configuration
+  * @retval None
+  */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Configure the main internal regulator output voltage
-   */
+  */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
   /** Initializes the RCC Oscillators according to the specified parameters
-   * in the RCC_OscInitTypeDef structure.
-   */
+  * in the RCC_OscInitTypeDef structure.
+  */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -199,8 +189,9 @@ void SystemClock_Config(void)
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-   */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
@@ -217,9 +208,9 @@ void SystemClock_Config(void)
 /* USER CODE END 4 */
 
 /**
- * @brief  This function is executed in case of error occurrence.
- * @retval None
- */
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -231,14 +222,14 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef USE_FULL_ASSERT
+#ifdef  USE_FULL_ASSERT
 /**
- * @brief  Reports the name of the source file and the source line number
- *         where the assert_param error has occurred.
- * @param  file: pointer to the source file name
- * @param  line: assert_param error line source number
- * @retval None
- */
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */

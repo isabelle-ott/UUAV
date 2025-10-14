@@ -24,6 +24,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "../cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+  "../cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc"
   )
 set(CMAKE_DEPENDS_CHECK_C
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/can.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/can.c.obj"
@@ -38,15 +39,13 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/Core/Src/usart.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/Core/Src/usart.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/arm.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/arm_drive.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/arm_drive.c.obj"
+  "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/chassis_control.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/chassis_control.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder.c.obj"
-  "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/encoder_odom.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/encoder_odom.c.obj"
-  "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/imu_odom.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/imu_odom.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/init.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/init.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/it_cb.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/it_cb.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/jy61p.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/jy61p.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/light.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/light.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor.c.obj"
-  "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/motor_control.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/motor_control.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/odom.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/odom.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/pid.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/pid.c.obj"
   "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/User/Src/position_control.c" "/home/xybxy/w_work/catkin_ws/src/UUAV/px4stm32/SUPERCAR_STM32F407ZGT6/build/CMakeFiles/SUPERCAR_STM32F407ZGT6.dir/User/Src/position_control.c.obj"
@@ -69,6 +68,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../cmake/stm32cubemx/../../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
   "../cmake/stm32cubemx/../../Drivers/CMSIS/Include"
+  "../cmake/stm32cubemx/../../Middlewares/ST/ARM/DSP/Inc"
   )
 
 # Targets to which this target links.

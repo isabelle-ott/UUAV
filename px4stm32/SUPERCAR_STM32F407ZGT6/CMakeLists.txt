@@ -48,20 +48,18 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/arm_drive.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/arm.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/encoder_odom.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/encoder.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/imu_odom.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/init.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/it_cb.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/light.c
-    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/motor_control.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/motor.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/odom.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/pid.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/position_control.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/uart_pi.c
     ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/jy61p.c
-
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/pid.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/User/Src/chassis_control.c
 )
 
 # Add include paths

@@ -4,12 +4,8 @@
 #include "usart.h"
 #include "tim.h"
 #include "encoder.h"
-#include "encoder_odom.h"
-#include "imu_odom.h"
 #include "odom.h"
 #include "motor.h"
-#include "pid.h"
-#include "motor_control.h"
 #include "jy61p.h"
 
 // -------------------------- 函数声明 --------------------------

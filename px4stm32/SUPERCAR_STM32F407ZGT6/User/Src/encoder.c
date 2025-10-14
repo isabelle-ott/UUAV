@@ -55,6 +55,21 @@ void Encoder_Init(Encoder *encoder,
     encoder->current_rr_vel = 0.0f;
     encoder->current_lr_vel = 0.0f;
 
+    encoder->last_Vx_chassis = 0.0f;
+    encoder->last_Vy_chassis = 0.0f;
+    encoder->last_Vyaw_chassis = 0.0f;
+
+    encoder->current_Vx_chassis = 0.0f;
+    encoder->current_Vy_chassis = 0.0f;
+    encoder->current_Vyaw_chassis = 0.0f;
+
+    encoder->average_Vx_chassis = 0.0f;
+    encoder->average_Vy_chassis = 0.0f;
+    encoder->average_Vyaw_chassis = 0.0f;
+
+    encoder->base_x = 0.0f;
+    encoder->base_y = 0.0f;
+    encoder->base_theta = 0.0f;
     // 3. 初始化计数器
     Encoder_ResetAllCounts(encoder);
 }
@@ -90,9 +105,36 @@ void Encoder_Sample(Encoder *encoder)
     // 5. 计算速度（公式：速度 = 计数差值 / (线数*减速比) / 时间差 → 单位：圈/秒）
     float pulses_per_circle = (float)(XIANSHU * JIANSUBI); // 每圈总脉冲数
     encoder->current_lf_vel = curr_lf_diff / pulses_per_circle / time_diff_s;
-    encoder->current_rf_vel = curr_rf_diff / pulses_per_circle / time_diff_s;
-    encoder->current_rr_vel = curr_rr_diff / pulses_per_circle / time_diff_s;
+    encoder->current_rf_vel = -(curr_rf_diff / pulses_per_circle / time_diff_s);
+    encoder->current_rr_vel = -(curr_rr_diff / pulses_per_circle / time_diff_s);
     encoder->current_lr_vel = curr_lr_diff / pulses_per_circle / time_diff_s;
+
+    // 底盘速度
+    encoder->last_Vx_chassis = encoder->current_Vx_chassis;
+    encoder->last_Vy_chassis = encoder->current_Vy_chassis;
+    encoder->last_Vyaw_chassis = encoder->current_Vyaw_chassis;
+
+    encoder->current_Vx_chassis = (encoder->current_lf_vel * 2 * M_PI + encoder->current_rf_vel * 2 * M_PI + encoder->current_lr_vel * 2 * M_PI + encoder->current_rr_vel * 2 * M_PI) * Wheel_Radius / 4;
+    encoder->current_Vy_chassis = (-encoder->current_lf_vel * 2 * M_PI + encoder->current_rf_vel * 2 * M_PI + encoder->current_lr_vel * 2 * M_PI - encoder->current_rr_vel * 2 * M_PI) * Wheel_Radius / 4;
+    encoder->current_Vyaw_chassis = (-encoder->current_lf_vel * 2 * M_PI + encoder->current_rf_vel * 2 * M_PI - encoder->current_lr_vel * 2 * M_PI + encoder->current_rr_vel * 2 * M_PI) * Wheel_Radius / 2 / (Wheel_track + Wheel_base);
+
+    encoder->average_Vx_chassis = (encoder->last_Vx_chassis + encoder->current_Vx_chassis) / 2;
+    encoder->average_Vy_chassis = (encoder->last_Vy_chassis + encoder->current_Vy_chassis) / 2;
+    encoder->average_Vyaw_chassis = (encoder->last_Vyaw_chassis + encoder->current_Vyaw_chassis) / 2;
+
+    // 6.底盘位置增量
+    double delta_displacement_x = (encoder->average_Vx_chassis * cos(encoder->base_theta) - encoder->average_Vy_chassis * sin(encoder->base_theta)) * time_diff_s;
+    double delta_displacement_y = (encoder->average_Vx_chassis * sin(encoder->base_theta) + encoder->average_Vy_chassis * cos(encoder->base_theta)) * time_diff_s;
+    double delta_theta = encoder->average_Vyaw_chassis * time_diff_s;
+
+    // 更新里程计
+    encoder->base_x += delta_displacement_x;
+    encoder->base_y += delta_displacement_y;
+    encoder->base_theta += delta_theta;
+    while (encoder->base_theta > M_PI)
+        encoder->base_theta -= 2 * M_PI;
+    while (encoder->base_theta < -M_PI)
+        encoder->base_theta += 2 * M_PI;
 
     // 6. 重置计数器
     Encoder_ResetAllCounts(encoder);
@@ -111,7 +153,7 @@ float Encoder_GetRightFrontVel(const Encoder *encoder)
 
 float Encoder_GetRightRearVel(const Encoder *encoder)
 {
-    return (encoder != NULL) ? encoder->current_rr_vel : 0.0f;
+    return (encoder != NULL) ? (encoder->current_rr_vel) : 0.0f;
 }
 
 float Encoder_GetLeftRearVel(const Encoder *encoder)
@@ -199,4 +241,34 @@ void Encoder_ResetAllCounts(Encoder *encoder)
     Encoder_ResetRightFrontCount(encoder);
     Encoder_ResetRightRearCount(encoder);
     Encoder_ResetLeftRearCount(encoder);
+}
+
+float Encoder_GetVx_chassis(Encoder *encoder)
+{
+    return (encoder != NULL) ? encoder->current_Vx_chassis : 0;
+}
+
+float Encoder_GetVy_chassis(Encoder *encoder)
+{
+    return (encoder != NULL) ? encoder->current_Vy_chassis : 0;
+}
+
+float Encoder_GetVyaw_chassis(Encoder *encoder)
+{
+    return (encoder != NULL) ? encoder->current_Vyaw_chassis : 0;
+}
+
+float Encoder_Getbase_x(Encoder *encoder)
+{
+    return (encoder != NULL) ? encoder->base_x : 0;
+}
+
+float Encoder_Getbase_y(Encoder *encoder)
+{
+    return (encoder != NULL) ? encoder->base_y : 0;
+}
+
+float Encoder_Getbase_theta(Encoder *encoder)
+{
+    return (encoder != NULL) ? encoder->base_theta : 0;
 }

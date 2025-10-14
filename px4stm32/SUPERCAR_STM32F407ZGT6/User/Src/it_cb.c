@@ -10,16 +10,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     {
         // 采样编码器数据
         Encoder_Sample(&encoder_);
-
-        // 从编码器更新里程计数据
-        EncoderOdom_UpdateFromEncoder(&encoder_odom_, &encoder_);
-
-        // 计算里程计
-        EncoderOdom_Calculate(&encoder_odom_);
-
-        // MotorControl_Loop(&motor_control_);
-
-        // PositionControl_Loop(&position_control_);
     }
 }
 

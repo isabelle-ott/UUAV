@@ -22,6 +22,9 @@
 #define ENCODER_INIT_VAL 32767 // 16位计数器初始值
 #define ENCODER_MAX_VAL 65535  // 16位计数器最大值
 
+#define Wheel_track 0.23 // 横向 x 左右
+#define Wheel_base 0.094 // 纵向 y 前后
+#define Wheel_Radius 0.034
 // -------------------------- 编码器结构体定义 --------------------------
 
 typedef struct
@@ -47,6 +50,24 @@ typedef struct
     float current_rf_vel;
     float current_rr_vel;
     float current_lr_vel;
+
+    // 底盘速度
+    float last_Vx_chassis;
+    float last_Vy_chassis;
+    float last_Vyaw_chassis;
+
+    float current_Vx_chassis;
+    float current_Vy_chassis;
+    float current_Vyaw_chassis;
+
+    float average_Vx_chassis;
+    float average_Vy_chassis;
+    float average_Vyaw_chassis;
+
+    // 里程计数据
+    float base_x;
+    float base_y;
+    float base_theta;
 } Encoder;
 
 // -------------------------- 核心接口函数声明 --------------------------
@@ -130,3 +151,11 @@ void Encoder_ResetLeftRearCount(Encoder *encoder);
  * @param encoder：编码器结构体实例指针（非NULL）
  */
 void Encoder_ResetAllCounts(Encoder *encoder);
+
+float Encoder_GetVx_chassis(Encoder *encoder);
+float Encoder_GetVy_chassis(Encoder *encoder);
+float Encoder_GetVyaw_chassis(Encoder *encoder);
+
+float Encoder_Getbase_x(Encoder *encoder);
+float Encoder_Getbase_y(Encoder *encoder);
+float Encoder_Getbase_theta(Encoder *encoder);
